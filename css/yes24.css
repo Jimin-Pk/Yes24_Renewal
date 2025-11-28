@@ -1,0 +1,1756 @@
+@charset "utf-8";
+
+
+*, *::after, *::before {box-sizing: border-box;}
+a {text-decoration: none;}
+body {min-width:640px;}
+
+button {width:190px; height:45px; text-align:center; background-color: #0080FF; color:#fff; border:none; border-radius:30px; font-size:18px; font-weight:400; line-height:45px; display:block; margin: 40px auto; cursor: pointer;}
+button > span {font-weight:600;}
+
+#direction {cursor: pointer;}
+
+header {width:85%; margin:0 auto; height:115px; padding:30px 0px; display: flex; align-items: center; gap: 21px; justify-content:space-between;}
+header #wlogo {display:none;}
+header #logo, #cart {width:55px; height:55px;}
+header #logo img {width:55px; height:55px;}
+header #cart img {width:55px; height:55px;}
+header #searchbox {width:68%; height: 55px; padding:10px 20px; border:2px solid #ddd; border-radius:30px; font-size:20px; font-weight:500; color:#000;}
+header #srch {display:none;}
+header #smallbanner {display: none;}
+
+#topmenu {display:none;}
+
+#hmenu {width:85%; height:58px; padding: 20px 0px; display: flex; align-items:center; gap:44px; justify-content: space-between; margin:0 auto;}
+#hmenu .title {text-align: center; font-size:20px; font-weight:700; line-height:30px; color:#000; cursor:pointer;}
+#hmenu .title:hover {color:#0080FF;}
+#hmenu >.title > .titleimg {width:60px; height:60px;}
+#hmenu > .title:nth-child(1), .title:nth-child(7), .title:nth-child(8), .title:nth-child(9), .title:nth-child(10), .title:nth-child(11), .title:nth-child(12), .title:nth-child(13) {display:none;}
+#hmenu .dbtn {width:32px; height:32px; transition: transform 0.5s ease;}
+#hmenu .dbtn:hover {cursor: pointer;}
+
+#hfmenu {width:100%; height:0; background-color:#fff; opacity:1; visibility:hidden; overflow:hidden; transition:height 2s ease, opacity 2s ease; position:absolute; top:173px; left:0; z-index:1000;}
+#hfmenu.show {width:100%; opacity: 1; visibility:visible; height:630px;  padding:43px 0; transition:height 2s ease, opacity 2s ease;}
+
+#hfmenu .hbt {width:90%; height:65px; background-color:#fff; border:2px solid #0080FF; display:flex; gap:10px; border-radius:15px; margin: 0 auto; align-items:center; justify-content:center; margin-bottom:40px;}
+.hbt span.hi {line-height:34px; color:#0080FF; font-size:22px; font-weight:600;}
+.hbt img.hi {width:34px; height:34px;}
+#hfmenu .cadi {width:90%; margin:0 auto; margin-bottom:40px;}
+.cadi .direct {font-size:22px; font-weight:600; margin-bottom:20px;}
+.cadi .cadili {width:100%; display:flex; gap:15px;flex-wrap:wrap; justify-content: space-between;}
+.cadili .cdbt {width:131px; height:50px; background-color:#66beff; border-radius:25px; font-size:18px; color:#fff; text-align:center; line-height:50px; font-weight:600;}
+#hfmenu .sedi {width:90%; margin:0 auto; margin-bottom:40px;}
+.sedi .direct {font-size:22px; font-weight:600; margin-bottom:20px;}
+.sedi .sedili {width:100%; display:flex; gap:15px;flex-wrap:wrap; justify-content: space-between;}
+.sedili .cdbt {width:131px; height:50px; background-color:#66beff; border-radius:25px; font-size:18px; color:#fff; text-align:center; line-height:50px; font-weight:600;}
+#hfmenu .change {width:90%; height:45px; margin:0 auto; display:flex; justify-content:space-between;}
+.change .want {font-size:22px; line-height:45px; color:#999;}
+.change .wtb {font-size:18px; line-height:45px; background-color: #0080FF; border-radius:10px; width:155px; height:45px; text-align:center; color:#fff;}
+
+@media screen and (max-width: 1469px) {
+    #whfmenu {display: none;}
+}
+
+#wrapper {overflow:hidden;}
+.slider {width:1000%; height:auto; display:flex; gap:0; overflow:hidden; transition: transform 0.7s ease-in-out;}
+.slider .banimg {width:100%;}
+.banimg img {width:100%;}
+
+#iconbox {width:90%; height:206px; margin:0 auto; position:relative; top:0; left:0; align-items: center;}
+#iconbox #ib {display: flex; align-items: flex-start; align-content: flex-start; gap:14px 50px; flex-wrap: wrap; padding:20px; position:relative; top:0; justify-content:center;}
+#iconbox .iconmenu {display: flex; width:60px; height:76px; flex-direction: column; justify-content: center; align-items:center; gap:10px;}
+.iconmenu img {width:50px; height:50px;}
+.iconmenu .menu {font-size: 13px; font-weight:600; text-align: center;}
+.iconmenu .menu:last-child {width:60px;}
+
+#today {width:100%; height: 822px; background: linear-gradient(180deg, #E5F2FF 10%, #fff 100%); overflow: hidden;}
+#today #wtxtdate {display:none;} 
+#txtdate {width:108px; height:60px; text-align:center;margin:25px auto 20px;}
+#txtdate .date {color:#999; font-size:15px; font-weight:400; line-height:20px; margin-bottom:5px;}
+#txtdate .book {color:#000; font-size:29px; font-weight:700;}
+
+#booklist ul {width:100%; height:595px; text-align:center; }
+#booklist ul li img {width:460px; height:460px;}
+#booklist ul li #bookinfo {text-align: center; margin-top:20px; display: flex; flex-direction: column; gap:10px;}
+#booklist ul li #bookinfo .exp {color: #0080FF; font-size:15px; font-weight:500; line-height:15px; margin-bottom:10px;}
+#booklist ul li #bookinfo .title {color:#000; font-size:24px; font-weight:700; line-height:24px; margin-bottom:20px;}
+#booklist ul li #bookinfo .at {color:#999; font-size:15px; font-weight:500; line-height:500; line-height:15px;}
+
+#today #auto {display: none;}
+#tdnow {display:none;}
+
+#pubad {display:none;}
+
+#popular {width:90%; height:505px; margin:20px auto 0; } 
+.maintt {width:200px; height:35px; margin:10px auto 30px;}
+.maintt .pop {font-size: 29px; color:#000; text-align:center; font-weight:700; line-height:35px;}
+#popular #ant {height: 75px;}
+#popular #ant ul{width:100%; height:40px; display: inline-flex; align-items: center; gap:12px; margin-bottom:15px;}
+#ant li.on {width:85px; height:40px; border-radius:20px; background: #0080FF; color:#fff; font-size:16px; line-height:40px; text-align:center;}
+#ant li {width:90px; height:40px; border-radius:20px; border:2px solid #0080FF; color:#0080FF; font-size:16px; line-height:40px; text-align:center;}
+#ant .time {font-size: 15px; color:#999; text-align:right; font-weight:500; float:right; line-height:15px;}
+
+#poplist #hot {width:100%; height: 80px; border-top:1px solid #f2f2f2; border-bottom:1px solid #f2f2f2; display: inline-block; font-size: 18px; color:#000; font-weight:500; padding:29px 13px 29px 25px;}
+#hot span#hh {color:#f66; font-size:18px; font-weight:600; margin-right:10px;}
+#hot img {width:70px; height:70px; margin:-25px 0; float: right;}
+#poplist ul .gradebox {width:100%; height:60px; border-bottom:1px solid #f2f2f2; padding: 21px 40px 21px 25px;;}
+.gradebox img {width:28px; height:28px; margin:-8px; float:right;}
+.gradebox .grade {width:40px; text-align: center; color:#000; font-size:15px; font-weight:600; margin-right:30px;}
+.gradebox .tt {text-align:center; color:#000; font-size:15px; font-weight:400;}
+.gradebox:nth-child(4), .gradebox:nth-child(5), .gradebox:nth-child(6), .gradebox:nth-child(7), .gradebox:nth-child(8), .gradebox:nth-child(9), .gradebox:nth-child(10) {display: none;}
+
+#middlebanner {width:100%; height: auto; text-align: center; padding:25px; background-color: #eee; margin-top:20px;}
+#middlebanner .ad {width:100%; height:auto;}
+#middlebanner .ad:nth-child(2) {display:none;}
+
+#yespub {display:none;}
+#yearlast {display:none;}
+#webcrema {display: none;}
+
+#bookup {width:90%; height:405px; margin:40px auto 50px;}
+#bookup #bookuptt {width:218px; height:35px; margin:0 auto;}
+#bookup #bookuptt span {font-size:29px; color:#000; text-align:center; font-weight:700; line-height:35px;}
+#uplist {text-align: center; margin:40px auto; width:490px; overflow: hidden;}
+#uplist #buwrap {display:flex; gap:20px; transition:transform 0.5s ease;}
+#uplist .bu {width: 485px; height:275px;}
+
+#ulwrap #direction {width:90%; height:30px; display:flex; gap:530px; position:relative; bottom:200px; justify-content:center; margin:0 auto;}
+#prev {width:30px;height:30px;}
+#prev #previ {width:30px; height:30px;}
+#next {width:30px;height:30px;} 
+#next #nexti {width:30px; height:30px;}
+
+#bookup #halfauto {width:100px; height:15px; display: flex; gap: 15px; margin:0 auto; position: relative; bottom:30px;}
+#bookup #halfauto .dotbtn {border-radius:10px; width:15px; height:15px; background-color: #cecece; transition: 0.3s ease;}
+#bookup #halfauto .on {background-color: #0080FF; width:30px;}
+
+#issue {width:90%; height:467px; margin:0 auto 40px; overflow: hidden;}
+#issuecheck {width:180px; height:70px; margin:0 auto 40px; text-align:center;}
+#issuecheck .check {font-size:15px; font-weight:400; color:#999; line-height:20px; margin-bottom:10px; display: block;}
+#issuecheck .hot {font-size:29px; font-weight:700; line-height:35px; display:block;}
+#issue #container {width: 100%; height:357px; overflow:scroll;}
+#container::-webkit-scrollbar {display:none;}
+#container #imgwrap {width:1350px; height:357px; display:flex; gap:20px; flex-wrap: wrap; flex-direction:row; justify-content: space-between;}
+#imgwrap .issueimg {width:150px; height:150px; border-radius:15px; box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);}
+
+#issue #direction {display:none; width:90%; height:30px; display:flex; gap:530px; position:relative; bottom:210px; justify-content:center; margin:0 auto;} 
+#prev {width:30px;height:30px;} 
+#next {width:30px;height:30px; } 
+
+#trend {width:100%; height:985px; text-align: center; margin: 0; padding:0;}
+#trendbook {display:flex; flex-direction: column; gap:10px; width:175px; text-align: center; margin:0 auto 30px;}
+#trendbook .tdb {display:block; font-size:15px; line-height:20px; color:#999; font-weight:400;}
+#trendbook .current {display:block; font-size:29px; line-height:35px; color:#000; font-weight:700;}
+#trendlist {margin:0; padding:0;}
+#trendlist ul {width:100%; display:inline-flex; justify-items: flex-start; align-items: flex-start;  cursor: pointer;}
+.tdlist{width:50%; height:400px; border:0.5px solid #e2e2e2; padding:20px;} 
+.tdlist img {width:270px; height:270px;}
+.tdlist .st {font-size:14px; font-weight:400; color: #0080FF; margin:10px auto; line-height:17px; display:block;}
+.tdlist .bt {font-size:18px; font-weight:600; color:#000; display:block; margin-bottom:10px;}
+.tdlist .tat {font-size:14px; font-weight:400; color:#999; line-height:17px; display:block;}
+
+.sline {width:100%; height:15px; background-color:#eee; margin: 50px auto;}
+
+#nobelprize {width:100%; height:740px; margin-bottom:50px;} 
+#nobel {display:flex; flex-direction: column; gap: 10px; width:270px; text-align: center; margin:0 auto 30px;}
+#nobel .ko {display:block; font-size:15px; line-height:20px; color:#999; font-weight:400;}
+#nobel .np {display:block; font-size:29px; line-height:35px; color:#000; font-weight:700;}
+#nbp {width:100%; height:640px; background: url(../img/nobelprize.png) no-repeat; background-size:cover;}
+
+#nbplist {display: flex; gap:25px; position:relative; top:286px; justify-content: center; padding:0 25px;}
+#nbplist .nbpl {width:180px; height:320px; text-align: left; position:relative;}
+#nbplist .nbpl:nth-child(4), .nbpl:nth-child(5), .nbpl:nth-child(6) {display:none;}
+#nbplist .nbpl img {width:180px; height:263px;}
+#nbplist .nbpl .nbbt {width:188px; display:block; font-size:18px; color:#000; font-weight:600; margin-top:10px;}
+#nbplist .nbpl .nbat {display:block; font-size:14px; color:#999; font:400; margin-top:10px;}
+
+#korea {width:100%; height:740px; margin-bottom:50px;} 
+#rk {display:flex; flex-direction: column; gap: 10px; width:270px; text-align: center; margin:0 auto 30px;}
+#rk .read {display:block; font-size:15px; line-height:20px; color:#999; font-weight:400;}
+#rk .demoko {display:block; font-size:29px; line-height:35px; color:#000; font-weight:700;}
+#rdk {width:100%; height:640px; background: url(../img/howdemodie.png) no-repeat; background-size:cover;}
+#rdklist {display: flex; gap:25px; position:relative; top:286px; justify-content: center; padding:0 25px;}
+#rdklist .rdkl {width:180px; height:320px; text-align: left;position:relative;}
+#rdklist .rdkl:nth-child(4), .rdkl:nth-child(5), .rdkl:nth-child(6) {display:none;}
+#rdklist .rdkl img {width:180px; height:263px;}
+#rdklist .rdkl .rdkbt {display:block; font-size:18px; color:#000; font-weight:600; margin-top:10px; width:180px; white-space: nowrap; text-overflow: ellipsis; overflow:hidden;}
+#rdklist .rdkl .rdkat {display:block; font-size:14px; color:#999; font:400; margin-top:10px; width:180px; white-space: nowrap; text-overflow: ellipsis; overflow:hidden;}
+
+#adbanner {width:100%; height: 130px; background-color:#003466; text-align:center;}
+#adbanner img {width:433px; height:130px;}
+
+#cremaclub {width:100%; height:712px; background-color: #FFFDEA; text-align:center; padding-top:40px; margin-bottom:40px;}
+#cremaclub #choice span {width:208px; height:35px; color:#392909; font-size:29px; font-weight:700;}
+#cremaclub #clwrap {overflow:hidden; width:250px; margin:0 auto;} 
+#cclist {width:250px; height:517px; margin:40px auto 0; text-align:center; justify-content:flex-start; display: flex; transition: 0.6s ease;}
+#cclist .ccl {width:250px; height: 517px; text-align: center;}
+#cclist .ccl img {width:250px; height: 365px; transition:0.4s}
+#cclist .ccl img:hover {transform: scale(103%); transition:0.4s;}
+#cclist .ccl .ccmt {width:250px; font-size:14px; font-weight:400; color:#0080FF; display:block; text-align:center; margin-bottom:15px;}
+#cclist .ccl .ccbt {width:250px; font-size:22px; font-weight:700; display:block; text-align:center; margin-bottom:15px; color:#000;}
+#cclist .ccl .ccat {width:250px; font-size:14px; font-weight:400; color: #999; display:block; text-align:center; }
+
+button#ccbtn {width:190px; height:45px; text-align:center; background-color: #392909; color:#fff; border:none; border-radius:30px; font-size:18px; font-weight:400; line-height:45px; display:block; margin: 0px auto;}
+button > span {font-weight:600;}
+
+#cremaclub #direction {width:80%; height:30px; display:flex; gap:530px; position:relative; bottom:380px; justify-content:center; margin:0 auto;}
+
+#earlyreader {width:100%; height:740px; margin-bottom:50px;} 
+#early {display:flex; flex-direction: column; gap: 10px; width:270px; text-align: center; margin:0 auto 30px;}
+#early .magnet {display:block; font-size:15px; line-height:20px; color:#999; font-weight:400;}
+#early .newb {display:block; font-size:29px; line-height:35px; color:#000; font-weight:700;}
+#ear {width:100%; height:640px; background: url(../img/goodreader.png) no-repeat; background-size:cover;}
+#earlist {display: flex; gap:25px; position:relative; top:286px; justify-content: center; padding:0 25px;}
+#earlist .earl {width:180px; height:320px; text-align: left;position:relative;}
+#earlist .earl:nth-child(4), .earl:nth-child(5) {display:none;}
+#earlist .earl img {width:180px; height:263px;}
+#earlist .earl .earbt {display:block; font-size:18px; color:#000; font-weight:600; margin-top:10px; width:180px; white-space: nowrap; text-overflow: ellipsis; overflow:hidden;}
+#earlist .earl .earat {display:block; font-size:14px; color:#999; font:400; margin-top:10px; width:180px; white-space: nowrap; text-overflow: ellipsis; overflow:hidden;}
+
+#classtf {width:90%; height: 530px; text-align: center; margin:0 auto;}
+#classtf #clstf {width:112px; height:35px; margin: 0 auto 30px; text-align: center;}
+#clstf .tf {font-size:29px; line-height:35px; font-weight:700; color: #000; text-align: center;}
+#classtf #ctfwrap {width:500px; overflow: hidden; margin:0 auto;}
+#classimg {width:500px; display:flex; gap:0; margin: 0 auto; transition: 0.6s ease;}
+#classimg .ctfbox {width:500px; height:315px;}
+#classimg .ctf {width:500px; height:315px;} 
+
+#classtf #halfauto {width:135px; height:15px; display: flex; gap: 15px; justify-content:space-around; margin:0 auto; position: relative; top:25px;}
+#classtf #halfauto .dotbtn1 {border-radius:10px; width:15px; height:15px; background-color: #cecece; transition: 0.3s ease;}
+#classtf #halfauto .on {background-color: #0080FF; width:30px;}
+
+#classtf button {width:190px; height:45px; text-align:center; background-color: #0080FF; color:#fff; border:none; border-radius:30px; font-size:18px; font-weight:400; line-height:45px; display:block; margin: 40px auto; position:relative; top:30px;}
+#classtf button > span {font-weight:600;}
+
+#classtf #direction {width:90%; height:30px; display:flex; gap:530px; position:relative; bottom:310px; justify-content:center; margin:0 auto;}
+
+#funding {width:100%; height: 685px; margin: 20px auto 40px; overflow: hidden;}
+#fund {display:flex; flex-direction: column; gap: 10px; width:270px; text-align: center; margin:0 auto 30px;}
+#fund .you {display:block; font-size:15px; line-height:20px; color:#999; font-weight:400;}
+#fund .yesfund {display:block; font-size:29px; line-height:35px; color:#000; font-weight:700;}
+
+#funding #fdl {overflow:scroll;}
+#fdl::-webkit-scrollbar {display:none;}
+#funding #fundlist {width:1460px; display:flex; gap:50px; padding: 0 25px;}
+#fundlist .fblist {width:315px; height:500px; overflow:hidden; border-radius:15px; display: flex; flex-direction: column; gap:0; text-align: center; justify-content:center;}
+#fundlist .fblist img {width:315px; height:340px;} 
+.fblist .fpx span {display:block;}
+.fblist .fpx {background-color: #f8f8f8; width:315px; height: 161px; padding-top:24px; padding-left:20px; padding-right:20px;}
+.fpx .fbt {font-size: 18px; font-weight: 600; text-align:left; color:#000;}
+.fpx .percent {font-size:18px; line-height:22px; font-weight:400; text-align:left; color:#0080FF; margin-top: 47px;}
+.fpx .price {font-size:18px; line-height:22px; font-weight:400; text-align: right; position:relative; bottom:22px; color:#000;}
+.fbline {width:325px; height:2px; background-color: #0080FF; position:relative; bottom:65px;}
+
+#value {width:90%; height:620px; margin:0 auto 40px; overflow:hidden;}
+#hunnit {display:flex; flex-direction: column; gap: 10px; width:270px; text-align: center; margin:0 auto 30px;}
+#hunnit .onehunnit {display:block; font-size:15px; line-height:20px; color:#999; font-weight:400;}
+#hunnit .only {display:block; font-size:29px; line-height:35px; color:#000; font-weight:700;}
+#value #valuelist {width:100%; height:430px; margin:0 auto; text-align: center; overflow-x:scroll;}
+#valuelist::-webkit-scrollbar {display:none;} 
+#vlist {width:125%; display:flex; gap:60px; justify-content:flex-start;}
+#vlist .vl img {width: 220px; height:323px;}
+#vlist .vl .vbt {font-size: 18px; font-weight:600; display:block; margin-bottom:16px; color:#000;}
+#vlist .vl .vat {font-size:14px; font-weight:400; display:block; color:#999;}
+
+#pick {width:100%; height:1070px; margin:0 auto; text-align:center; overflow:hidden;}
+#pick #pickt {display:block; margin:20px auto 40px; font-size:29px; font-weight:700;}
+
+#pick #pmwrapper {overflow-x: scroll;}
+#pmwrapper::-webkit-scrollbar{display:none;}
+#pick #pickmenu {display:flex; gap:5px; padding:0 25px; width:1010px; height:90px; margin:0 auto;}
+#pickmenu .pmenu {background-color: #f8f8f8; width:140px; height:90px; border-radius:12px; text-align: center; padding:10px; align-items: center; display:flex; flex-direction: column;}
+.pmenu div {width:46px; height:46px; text-align: center; padding:8px; margin-bottom:6px;}
+.pmenu img {width:30px; height:30px;}
+.pmenu .mt {font-size:14px; font-weight:500; display:block; color:#000;} 
+#pickmenu .pmenu.on {background-color: #0080FF;}
+#pickmenu .pmenu.on .mt.on {color:#fff;}
+#pickmenu .pmenu.on .icons.on {background:#fff; border-radius:30px;}
+
+#pick #ltca {display:flex; gap:58px; margin:0 auto; justify-content: center; margin:30px; cursor: pointer;}
+#ltca .cate {font-size:20px; font-weight:400; color:#999;}
+#ltca .cate.on {font-weight:600; color:#0080FF;}
+
+#pick #yplist {margin:0; padding:0;}
+#yplist ul {width:100%; display:inline-flex; justify-items: flex-start; align-items: flex-start;  cursor: pointer;}
+.plist{width:50%; height:400px; border:0.5px solid #e2e2e2; padding:20px; text-align: center;} 
+.plist img {width:270px; height:270px;}
+.plist .st {font-size:14px; font-weight:400; color: #0080FF; margin:10px auto; line-height:17px; display:block;}
+.plist .bt {font-size:18px; font-weight:600; color:#000; display:block; margin-bottom:10px; width:269px; white-space: nowrap; text-overflow: ellipsis; overflow:hidden; display:block; margin:0 auto 10px;}
+.plist .tat {font-size:14px; font-weight:400; color:#999; line-height:17px; display:block;}
+
+#timesale {width:100%; height:408px; margin:50px auto 40px; text-align:center; overflow:hidden;}
+#timesale #sale {font-size:29px; line-height:35px; font-weight:700; margin-bottom:40px; display:block;}
+#slwrapper {overflow-x:scroll;}
+#slwrapper::-webkit-scrollbar {display:none;}
+#salelist {width:1050px; height: 333px; display:flex; gap:30px; overflow:visible; margin:0 25px;}
+#salelist .slist {width:240px; height:333px; border-radius:10px;}
+#salelist .slist img {width:240px; height:240px;}
+
+.slist .sp{width:60px; height:60px; z-index:10; background-color: #f66; color:#fff; font-size: 18px; line-height:60px; border-radius:10px; position:relative; bottom: 244px; display:block;} 
+
+.slist .bkinfo {display:flex; flex-direction:column; position:relative; bottom:50px; text-align: center; align-items:center;}
+.bkinfo span {display:block;}
+.bkinfo .tst {font-size:18px; font-weight:600; width:240px; white-space: nowrap; text-overflow: ellipsis; overflow:hidden; color:#000;}
+
+.bkinfo .bbkk {display:flex; gap:10px; align-items: center; height:17px; margin-top:10px;}
+.bbkk .tsot {font-size:14px; line-height:17px; color:#999; text-decoration:line-through;}
+.bbkk .tsst {font-size:18px; line-height:17px; color:#f66; font-weight:700;}
+
+#mp {width:100%; height:844px; text-align:center;}
+#mpt {display:flex; flex-direction: column; gap: 10px; width:290px; text-align: center; margin:0 auto 40px;}
+#mpt .member {display:block; font-size:15px; line-height:20px; color:#999; font-weight:400;}
+#mpt .mempre {display:block; font-size:29px; line-height:35px; color:#000; font-weight:700;}
+#chatbg {width:100%; height:649px; background-color: #f8f8f8;}
+#chatbg #chatting {width:100%; height:649px; padding:20px 25px;}
+#chatting #qsp {width:56px; height:56px; float: left;}
+#chatting #asp {width:56px; height:56px; float: right;}
+#chatting .qp {display: flex; gap:10px; padding-left: 20px; text-align: center; margin-bottom:15px;}
+#chatting #question {width: 75%; height: 30%; background-color: #fff; border-radius:0px 15px 15px 15px; margin-left: 76px; padding:20px; margin-bottom: 30px; box-shadow: 0 0 3px rgba(0, 0, 0, 0.3);}
+.qp li {font-size: 13px; line-height:17px; color:#999;}
+#question #qc {display: flex; gap:8px; height: 34px; margin-bottom: 15px;}
+#qc li {height:34px; font-size:17px; line-height:34px; background-color: #eee; border-radius:5px; font-weight:600; text-align: center;}
+#qc li:first-child {width:54px;} 
+#qc li:last-child {width:89px;} 
+#question .qna.q {width:100%; font-size:18px; line-height:22px; font-weight:300; text-align: left;}
+
+#chatting .ap {display:flex; gap:10px; flex-direction: row-reverse; padding-right:20px; text-align:center; margin-bottom:15px; }
+.ap li {font-size:13px; line-height:17px; color:#999;}
+#chatting #answer {width:75%; height:325px; float:right; margin-right:20px;}
+.qna.a {width:100%; height:39%; font-size:18px; line-height:22px; font-weight:300; text-align:left;  background-color: #993; border-radius:15px 0 15px 15px; padding:20px; color:#fff; margin-bottom:10px;} 
+.qna.aimg {width:100%; height:191px; border-radius:15px; background-color: #993; color:#fff; padding:20px; display: inline-block;}
+.qna.aimg img {width: 150px; height:150px; float: left; margin-right:20px;}
+ul#aimgprice {display: flex; flex-direction: column; gap:10px; font-size:18px; font-weight:300; text-align: left;}
+
+button.qunan {width:190px; height:45px; text-align:center; background-color: #993; color:#fff; border:none; border-radius:30px; font-size:18px; font-weight:400; line-height:45px; display:block; margin: 40px auto;}
+button > span {font-weight:600;}
+
+#daybanner {width:100%; height:140px; background-color: #036; text-align:center; padding:35px; color:#fff; margin:40px 0;}
+#daybanner p:first-child {font-size:29px; font-weight:700; margin-bottom:10px;}
+#daybanner p:last-child {font-size:20px;} 
+
+#youtube {width:100%; height:auto; text-align:center; margin-bottom:50px; padding:0 25px;} 
+#youtube #ytnbtn {display: none;}
+#youtube #yt {display:block; text-align: center; font-size:29px; font-weight:700; margin-bottom: 40px;}
+#onlyyt {margin-bottom:20px;}
+#onlyyt img {width:100%; height: 300px; border-radius:20px; margin-bottom:15px;}
+#onlyyt #ytt {text-align:left; font-size:20px; line-height:28px; font-weight:500;}
+#youtube #rlbook {font-size:20px; font-weight:500; color:#999;}
+#youtube #bookbg {width:100%; height:300px; margin:0 auto; background-color: #f8f8f8; border-radius:20px; margin-top:15px; padding:30px;}
+#bookbg img {width:160px; height:240px; float: left;}
+#bookbg #coldhand {display:flex; flex-direction: column; gap: 20px; text-align:left; padding: 52px 30px;} 
+#coldhand li:first-child {font-size:22px; font-weight:600;}
+#coldhand li:nth-child(2), li:nth-child(3) {font-size:16px; color:#999;}
+
+#wonlyyt {display:none;}
+button.ytbtn {width:252px;}
+
+#oneq {width:90%; height: 1382px; text-align:center; margin:0 auto;}
+#oneq #wlogo {display: none;}
+#oneqbook {display:flex; flex-direction: column; gap: 10px; width:290px; text-align: center; margin:0 auto 40px;}
+#oneqbook .easy {display:block; font-size:15px; line-height:20px; color:#999; font-weight:400;}
+#oneqbook .one {display:block; font-size:29px; line-height:35px; color:#000; font-weight:700;}
+
+#onelist {width:100%; display:flex; flex-direction:column; gap:30px; margin:0 auto;}
+#onelist .olist {width:100%; height:404px; border-radius:30px;}
+#onelist .olist img {width:100%; height:300px; border-radius:30px;}
+.olist .listbg {width:100%; height:124px; background-color: #f8f8f8; position: relative; bottom:25px; border-radius:0 0 30px 30px;}
+
+.listbg .listtitle {width:216px; height:40px; font-size:22px; color:#fff; line-height:40px; background-color: #333; text-align:center; position: relative; bottom:20px; margin-left:30px;}
+.listbg .batt {width:530px; height:64px; display:flex; flex-direction: column; gap:16px; margin-left:30px;  line-height:26px; text-align:left;}
+.batt .onebt {color:#999; font-size:20px;}
+.batt .bltt {color:#000;}
+.batt .oneat {color:#999; font-size:16px;}
+
+#oneq #readlist {display:none;}
+#oneq button {display:none;}
+
+#sarakzone {display:none;}
+#cardbanner {display:none;}
+
+#review {width:90%; height: 1442px; text-align:center; margin:0 auto; overflow: hidden;}
+#rvt {display:flex; flex-direction: column; gap: 10px; width:200px; text-align: center; margin:0 auto 40px;}
+#rvt .rc {display:block; font-size:15px; line-height:20px; color:#999; font-weight:400;}
+#rvt .tw {display:block; font-size:29px; line-height:35px; color:#000; font-weight:700;}
+
+#review #popwrapper {width:500px; overflow:hidden; margin:0 auto; border-radius:25px;}
+#review #poprv {width:1500px; height:450px; display:flex; margin:0 auto; transition:0.5s ease;}
+#poprv .rvlist {width:500px; height:450px; border-radius:25px; background-color: #f8f8f8; display:flex; flex-direction:column; gap:0;}
+.rvlist > img {width:100%; height:270px; border-radius:25px 25px 0 0 ;}
+.rvlist > .wimg {display:none;}
+.rvlist .rvbg {width:100%; height:180px; padding:15px 30px;}
+.rvbg .rvbk {width:110px; height:150px; float:left;}
+.rvbg .rbinfo {display:flex; padding:21px 20px; flex-direction:column; gap:15px; text-align:left;}
+.rbinfo .rbtt {color:#999; font-size:18px; line-height:22px; font-weight:500;}
+.rbtt .rbb {color:#000;}
+.rbinfo .rbat {color:#999; font-size:14px; line-height:17px;}
+.rbinfo .rvrk {display:flex; gap:10px; text-align:center;}
+.rvrk img {width:26px; height:26px;}
+.rvrk .rkpt {font-size:22px; line-height:26px; font-weight: 500; color:#000;}
+.rvrk .rkam {font-size:15px; line-height:26px; color:#999;}
+
+#review #direction {width:90%; height:30px; display:flex; gap:530px; position:relative; bottom:250px; justify-content:center; margin:0 auto;}
+
+#review #halfauto {width:100px; height:15px; display: flex; gap: 15px; margin:20px auto 50px;}
+#review #halfauto .dotbtn2 {border-radius:10px; width:15px; height:15px; background-color: #cecece; transition:0.5s ease;}
+#review #halfauto .dotbtn2.on {background-color: #0080FF; width:30px;}
+
+#review #thisweek {color:#0080FF; font-size:24px; font-weight:600;}
+
+#review #twlist {display:flex; flex-direction: column; margin-top:20px;}
+#twlist .twl {width:100%; height:208px; padding:30px 40px; border-top: 1px solid #d9d9d9;}
+.twl:last-child {border-bottom: 1px solid #d9d9d9;}
+.twl .rank {font-size:25px; font-weight:600; line-height:148px; float:left; margin-right:25px; color:#000;}
+.twl > img {width:110px; height:150px; float:left; margin-right:20px;}
+.twl .twinfo {display: flex; gap:20px; flex-direction: column; text-align: left;}
+.twinfo .mem, .rcm {font-size:15px; color:#999; font-weight:400;}
+.twinfo .twbt {font-size:20px; font-weight:500; width:316px; white-space: nowrap; text-overflow: ellipsis; overflow:hidden; color:#000;}
+.twinfo .twrk {display:flex; gap:10px;}
+.twrk .bs {width:26px; height:26px;}
+.twrk .twpt {font-size:22px; line-height:26px; font-weight:500; color:#000;}
+.twrk .twam {font-size:15px; line-height:26px; color:#999;}
+
+#wmp {display:none;}
+
+#event {width:94%; height:701px; margin:0 auto; overflow:hidden;}
+#eventt {display:flex; flex-direction: column; gap: 10px; width:200px; text-align: center; margin:0 auto 40px;}
+#eventt .ct {display:block; font-size:15px; line-height:20px; color:#999; font-weight:400;}
+#eventt .tm {display:block; font-size:29px; line-height:35px; color:#000; font-weight:700;}
+#eventt .ctm {display:none;}
+
+#event #evtwrapper {width:590px;  margin:0 auto;  transition: 0.5s ease;}
+#event #evts {width:1770px; display:flex; gap:0; text-align:center;}
+#evts .evl {width:100%; height:421px; display:flex; flex-direction: column; gap:25px; align-items:center;}
+#evts .evl:nth-child(4) {display:none;}
+
+.evl .evth {width:250px; height:250px;}
+.evtt {width:250px; height:40px; line-height:40px; display:flex; background-color: #f4f4f4; border-radius:20px;}
+.evtt span {display:block; text-align:center;}
+.evtt .ev {width:125px; line-height:40px; font-size: 22px; font-weight:500; background-color: #4000FF; color:#fff; border-radius:20px;}
+.evtt .plan {width:125px; line-height:40px; font-size:20px; font-weight:400; color:#000;}
+.evl .evntt {font-size:25px; font-weight:600; color:#000;}
+.evl .evntlt {font-size:18px; font-weight:400; color:#999;}
+
+
+#event #direction {width:90%; height:30px; display:flex; gap:530px; position:relative; bottom:200px; justify-content:center; margin:0 auto;}
+
+#event #halfauto {width:100px; height:15px; display: flex; gap: 15px; margin:30px auto; justify-content: space-around;}
+#event #halfauto .dotbtn3 {border-radius:10px; width:15px; height:15px; background-color: #cecece; transition:0.5s ease;}
+#event #halfauto .dotbtn3.on {background-color: #0080FF; width:30px;}  
+
+#service {width:90%; height:365px; margin:45px auto; padding:0 31px; text-align:center;}
+#service .svtt {font-size:29px; font-weight:700; margin-bottom:50px;}
+#service #svlist {width:514px; height:280px; display:flex; gap:30px 51px; flex-wrap:wrap; margin:0 auto;}
+#svlist .svl {display:flex; flex-direction:column; gap:15px;}
+#svlist .svl img {width:90px; height:90px; border-radius:20px;}
+.svl .svt {color:#000; font-size: 17px; font-weight:500;}
+
+#notice {width:100%; height: 90px; margin:0 auto 20px;}
+#notice .sline {margin:30px auto 0;}
+#realnt {width:95%; padding:30px; display:flex; gap:60px; margin:0 auto;}
+#realnt .big {font-size:20px; font-weight:600; line-height:30px;}
+#realnt .small {font-size:16px; font-weight:400; line-height:30px;}
+
+#notice #wrealnt {display: none;}
+#notice #direction {float:right; margin-right:30px; position:relative; bottom:60px;}
+
+#bar {width:100%; height:100px; position:fixed; bottom:-2px; background: url(../img/navigation\ bar.png); background-size:100% 124px; z-index:9999;}
+#bar #barbg {width:100%; height:100px;}
+#navmenu {width:100%; padding:17px 45px; display:flex; gap:75px; align-items:flex-end; justify-content:center;}
+#navmenu .snm img {width:30px; height:30px; margin-bottom:12px;}
+#navmenu .bnm img {width:70px; height:70px;}
+
+
+footer {width:100%; height: 534px; text-align:center; background-color: #041242; padding:30px 25px;}
+footer p {color:#fff;}
+#ftsv {display:flex; width:100%; gap:25px; margin-bottom:30px; justify-content:center;}
+#ftsv li {width:180px; height:60px; background-color: #fff; color:#000; line-height:60px; font-size:20px; font-weight:400; border-radius:15px;}
+#number {font-size:18px; font-weight:500; margin-bottom:10px;}
+#nw {font-size:15px; font-weight:400; color:#fff; margin-bottom:40px;}
+#sellinfo {font-size:22px; font-weight:600; text-decoration: underline; margin-bottom:50px;}
+#svend {width:100%; padding:0px 108px; display:flex; height:30px; flex-wrap: wrap; gap:8px; font-size:20px; text-align: center; justify-content:center; align-items:center;}
+#svend li {font-size:20px; line-height:30px; color:#fff; font-weight:300;}
+#svend .imp {font-weight:600;}
+#copy {margin-top:20px; color:#fff; font-weight:400;}
+
+#wfooter {display:none;}
+
+@media screen and (min-width:650px) and (max-width:747px) {
+    #iconbox #ib {max-width:688px; text-align:center;}
+    #ant > ul {justify-content: center;}
+    #chatting #question {height: 27%;}
+    #chatting #question .qna.q {font-weight:400;}
+    #chatting #answer .qna.a {height:38%; font-weight:400;}
+
+    #youtube #bookbg {width:95%;}
+    #onlyyt img {width: 95%; height:auto;}
+    #onlyyt #ytt {margin:0 auto; width:95%;}
+    
+    #review #poprv {width:1500px; height:450px; display:flex;}
+}
+
+@media screen and (min-width:748px) and (max-width:799px) {
+
+    #hfmenu .cadi {width:90%; margin:0 auto; margin-bottom:40px;}
+    .cadi .direct {font-size:22px; font-weight:600; margin-bottom:20px;}
+    .cadi .cadili {width:100%; display:flex; gap:15px;flex-wrap:wrap; justify-content:space-between;}
+    .cadili .cdbt {width:140px; height:50px; background-color:#66beff; border-radius:25px; font-size:18px; color:#fff; text-align:center; line-height:50px; font-weight:600;}
+
+    #hfmenu .sedi {width:90%; margin:0 auto; margin-bottom:40px;}
+    .sedi .direct {font-size:22px; font-weight:600; margin-bottom:20px;}
+    .sedi .sedili {width:100%; display:flex; gap:15px;flex-wrap:wrap; justify-content: space-between;}
+    .sedili .cdbt {width:140px; height:50px; background-color:#66beff; border-radius:25px; font-size:18px; color:#fff; text-align:center; line-height:50px; font-weight:600;}
+
+
+    #iconbox #ib {max-width:688px; text-align:center;}
+    #ant > ul {justify-content: center;}
+    #chatting #question {height: 27%;}
+    #chatting #question .qna.q {font-weight:400;}
+    #chatting #answer .qna.a {height:33%; font-weight:400;}
+
+    #youtube #bookbg {width:86%;}
+    #onlyyt img {width: 86%; height:auto;}
+    #onlyyt #ytt {margin:0 auto; width:86%;}
+    
+    #review #poprv {width:1500px; height:450px; display:flex;}
+}
+
+@media screen and (min-width: 800px) and (max-width:1019px) {
+
+    #bar {width:100%; height:90px; position:fixed; bottom:0; background: url(../img/tabletbg.png); background-size:100% 100px; z-index:9999;}
+    #bar #barbg {width:100%; height:90px;}
+    #navmenu {width:100%; padding: 13px 0; margin:0 auto; display:flex; gap:113px; align-items:flex-end;}
+    #navmenu .snm img {width:35px; height:35px; margin-bottom: 4px;}
+    #navmenu .bnm img {width:55px; height:55px;}
+
+    #ftsv {display:flex; width:100%; gap:40px; margin-bottom:30px; justify-content:center;}
+    #ftsv li {width:220px; height:60px; background-color: #fff; color:#000; line-height:60px; font-size:20px; font-weight:400; border-radius:15px;}
+
+    header {width:93%; gap:57px; justify-content:center;}
+    header #searchbox img {width: 35px; height:35px; position:relative; left:90%;} 
+    #hmenu {width:90%;}
+    #hmenu .title:nth-child(7) {display:block;}
+
+    #hfmenu {width:100%; height:0; background-color:#fff; opacity:0; visibility:hidden; overflow:hidden; transition:height 0.8s ease, opacity 2s ease;}
+    #hfmenu.show {opacity: 1; visibility:visible; height:630px;  padding:43px 0; transition:height 2s ease, opacity 0.8s ease;}
+
+    #hfmenu .hbt {width:90%; height:65px; background-color:#fff; display:flex; gap:10px; border-radius:15px; margin: 0 auto; align-items:center; justify-content:center; margin-bottom:40px;}
+    .hbt span.hi {line-height:34px; color:#000; font-size:22px; font-weight:600;}
+    .hbt img.hi {width:34px; height:34px;}
+
+    #hfmenu .cadi {width:90%; margin:0 auto; margin-bottom:40px;}
+    .cadi .direct {font-size:22px; font-weight:600; margin-bottom:20px;}
+    .cadi .cadili {width:100%; display:flex; gap:15px;flex-wrap:wrap; justify-content:flex-start;}
+    .cadili .cdbt {width:167px; height:50px; background-color:#66beff; border-radius:25px; font-size:18px; color:#fff; text-align:center; line-height:50px; font-weight:600;}
+
+    #hfmenu .sedi {width:90%; margin:0 auto; margin-bottom:40px;}
+    .sedi .direct {font-size:22px; font-weight:600; margin-bottom:20px;}
+    .sedi .sedili {width:100%; display:flex; gap:15px;flex-wrap:wrap; justify-content: space-between;}
+    .sedili .cdbt {width:167px; height:50px; background-color:#66beff; border-radius:25px; font-size:18px; color:#fff; text-align:center; line-height:50px; font-weight:600;}
+
+    #hfmenu .change {width:90%; height:45px; margin:0 auto; display:flex; justify-content:space-between;}
+    .change .want {font-size:22px; line-height:45px; color:#999;}
+    .change .wtb {font-size:18px; line-height:45px; background-color: #0080FF; border-radius:10px; width:155px; height:45px; text-align:center; color:#fff;}
+
+    #iconbox {width:100%; height:103px; margin:0 auto; position:relative; top:0; left:0;}
+    #iconbox #ib {display: flex; align-items: flex-start; align-content: flex-start; gap:37px; flex-wrap: wrap; padding:20px; position:relative; top:0;}
+    #iconbox .iconmenu {display: flex; width:40px; height: 63px; flex-direction: column; justify-content: center; align-items:center; gap:7px;}
+    .iconmenu img {width:40px; height:42px;}
+    .iconmenu .menu {font-size: 13px; font-weight:600; text-align: center;}
+    .iconmenu .menu:last-child {width:60px;}
+
+    #booklist ul {width:100%; height:595px; text-align:center;}
+    #booklist ul li img {width:460px; height:460px;}
+    #booklist ul li #bookinfo {text-align: center; margin-top:20px; display: flex; flex-direction: column; gap:10px;}
+    #booklist ul li #bookinfo .exp {color: #0080FF; font-size:15px; font-weight:500; line-height:15px; margin-bottom:10px;}
+    #booklist ul li #bookinfo .title {color:#000; font-size:24px; font-weight:700; line-height:24px; margin-bottom:20px;}
+    #booklist ul li #bookinfo .at {color:#999; font-size:15px; font-weight:500; line-height:500; line-height:15px;}
+
+    #middlebanner {width:100%; height: 182px; text-align: center; padding:25px; background-color: #eee; margin-top:20px; display:flex; gap:20px; justify-content:center;}
+    #middlebanner .ad {width:370px; height:auto;}
+    #middlebanner .ad:nth-child(2) {display:block; width:360px; height:auto;}
+
+    #value #valuelist {width:100%; height:430px; margin:0 auto; text-align: center; overflow-x:scroll;}
+    #valuelist::-webkit-scrollbar {display:none;} 
+    #vlist {width:100%; display:flex; gap:60px; justify-content:flex-start;}
+    
+    #popular #ant {height: 75px;}
+    #popular #ant ul{width:100%; height:40px; display: inline-flex; align-items: center; gap:12px; margin-bottom:15px; justify-content:center;}
+    #ant li.on {width:115px; height:40px; border-radius:20px; background: #0080FF; color:#fff; font-size:16px; line-height:40px; text-align:center;}
+    #ant li {width:115px; height:40px; border-radius:20px; border:2px solid #0080FF; color:#0080FF; font-size:16px; line-height:40px; text-align:center;}
+    #ant .time {font-size: 15px; color:#999; text-align:right; font-weight:500; float:right; line-height:15px;}
+
+    #nbplist {display: flex; gap:25px; position:relative; top:286px; justify-content: center; padding:0 25px;}
+    #nbplist .nbpl {width:172px; height:320px; text-align: left;position:relative;}
+    #nbplist .nbpl:nth-child(4) {display:block;}
+    #nbplist .nbpl img {width:172px; height: 257px;}
+
+    #rdklist {display: flex; gap:25px; position:relative; top:286px; justify-content: center; padding:0 25px;}
+    #rdklist .rdkl {width:172px; height:320px; text-align: left; position:relative;}
+    #rdklist .rdkl:nth-child(4) {display:block;}
+    #rdklist .rdkl img {width:172px; height:257px;}
+
+    #cclist {width:100%; height:517px; margin-top:30px; text-align:center; display: flex; gap:0px; justify-content: flex-start; margin:40px auto 0;}
+    #cclist::-webkit-scrollbar {display:none;}
+    #cclist .ccl {width:100%; height: 517px; text-align: center; padding:0; display:flex; flex-direction: column; gap:1px; align-items:center;}
+    #cclist .ccl .ccmt {width:250px; font-size:14px; font-weight:400; color:#0080FF; display:block; text-align:center;}
+    #cclist .ccl .ccbt {width:250px; font-size:22px; font-weight:700; display:block; text-align:center; color:#000;}
+    #cclist .ccl .ccat {width:250px; font-size:14px; font-weight:400; color: #999; display:block; text-align:center; }
+
+    #earlist {display: flex; gap:25px; position:relative; top:286px; justify-content: center; padding:0 25px;}
+    #earlist .earl {width:172px; height:320px; text-align: left;position:relative;}
+    #earlist .earl:nth-child(4) {display:block;}
+
+    #oneq {height: 300px; margin:0 auto;}
+    #onelist {display:flex; gap:15px; flex-direction: row; justify-content: center; height:193px;}
+    #onelist .olist {width:240px; height:173px; border-radius:10px;}
+    #onelist .olist img {width:100%; height:128px; border-radius:10px;}
+    .olist .listbg {width:100%; height:85px; background-color: #f8f8f8; position: relative; bottom:25px; border-radius:0 0 10px 10px; padding:5px;}
+
+    .listbg .listtitle {width:83px; height:17px; font-size:9px; color:#fff; line-height:17px; background-color: #333; text-align:center; position: relative; bottom:10px; margin-left:10px;}
+    .listbg .batt {width:216px; height:15px; display:flex; flex-direction: column; gap:5px; margin-left:10px;  line-height:15px; text-align:left;}
+    .batt .onebt {width:208px; color:#999; font-size:12px;}
+    .batt .bltt {color:#000;}
+    .batt .oneat {color:#999; font-size:8px;}
+
+    #chatting #question {height: 27%;}
+    #chatting #answer .qna.a {height:32%;}
+
+    #youtube {margin-bottom:100px;}
+    #onlyty {text-align: center;}
+    #youtube #bookbg {width:80%;}
+    #onlyyt img {width:80%; height: auto; border-radius:20px; margin-bottom:15px;}
+    #onlyyt #ytt {width:80%; margin:0 auto;}
+
+    #event {width:94%; height:640px;}
+    #event #evtwrapper {width:740px; margin:0 auto;}
+    #event #evts {width:740px; display:flex; gap:17px; text-align:center;}
+    #evts .evl {width:100%; height:421px; display:flex; flex-direction: column; gap:20px; align-items:center;}
+    #evts .evl:nth-child(3) .plan, .evntt {color:#000;}
+    .evl .evth {width:235px; height:235px;}
+    .evtt {width:235px; height:40px; line-height:40px; display:flex; background-color: #f4f4f4; border-radius:20px;}
+    .evtt span {display:block; text-align:center;}
+    .evtt .ev {width:125px; line-height:40px; font-size: 18px; font-weight:500; background-color: #4000FF; color:#fff; border-radius:20px;}
+    .evtt .plan {width:125px; line-height:40px; font-size:16px; font-weight:400}
+
+    .evl .evntt {font-size:20px; font-weight:600;}
+    .evl .evntlt {font-size:14px; font-weight:400; color:#999;}
+
+    #event #direction {display: none;}
+    #event #halfauto {display: none;}
+
+    #service {width:90%; height:210px; margin:45px auto; padding:0 31px; text-align:center;}
+    #service .svtt {font-size:29px; font-weight:700; margin-bottom:50px;}
+    #service #svlist {width:640px; height:115px; display:flex; gap:32px; margin:0 auto;}
+    #svlist .svl {display:flex; flex-direction:column; gap:15px;}
+    #svlist .svl img {width:80px; height:80px; border-radius:18px;}
+    .svl .svt {color:#000; font-size: 17px; font-weight:500;}
+
+}
+
+@media screen and (min-width: 1020px) and (max-width:1200px) {
+    body {width:98%; margin:0 auto;}
+
+    #bar {width:100%; height:100px; position:fixed; bottom:0; background: url(../img/tabletbg.png); background-size:100% 100px; z-index:9999; margin:0 auto;}
+    #bar #barbg {width:100%; height:100px;}
+    #navmenu {width:100%; padding: 13px 0; margin:0 auto; display:flex; gap:128px; align-items:flex-end;}
+    #navmenu .snm img {width:35px; height:35px; margin-bottom:12px;}
+    #navmenu .bnm img {width:75px; height:75px;}
+
+    #ftsv {display:flex; width:100%; gap:40px; margin-bottom:30px; justify-content:center;}
+    #ftsv li {width:220px; height:60px; background-color: #fff; color:#000; line-height:60px; font-size:20px; font-weight:400; border-radius:15px;}
+
+    header {width:93%; gap:57px; justify-content:center;}
+    header #searchbox img {width: 35px; height:35px; position:relative; left:90%;} 
+    #hmenu {width:90%;}
+    #hmenu .title:nth-child(7) {display:block;}
+
+    #hfmenu {width:100%; height:0; background-color:#f0f0f0; opacity:0; visibility:hidden; overflow:hidden; transition:height 0.8s ease, opacity 1s ease;}
+    #hfmenu.show {opacity: 1; visibility:visible; height:630px;  padding:43px 0; transition:height 1s ease, opacity 0.8s ease;}
+
+    #hfmenu .hbt {width:90%; height:65px; background-color:#fff; display:flex; gap:10px; border-radius:15px; margin: 0 auto; align-items:center; justify-content:center; margin-bottom:40px;}
+    .hbt span.hi {line-height:34px; color:#000; font-size:22px; font-weight:600;}
+    .hbt img.hi {width:34px; height:34px;}
+
+    #hfmenu .cadi {width:90%; margin:0 auto; margin-bottom:40px;}
+    .cadi .direct {font-size:22px; font-weight:600; margin-bottom:20px;}
+    .cadi .cadili {width:100%; display:flex; gap:15px;flex-wrap:wrap; justify-content:space-between;}
+    .cadili .cdbt {width:200px; height:50px; background-color:#66beff; border-radius:25px; font-size:18px; color:#fff; text-align:center; line-height:50px; font-weight:600;}
+
+    #hfmenu .sedi {width:90%; margin:0 auto; margin-bottom:40px;}
+    .sedi .direct {font-size:22px; font-weight:600; margin-bottom:20px;}
+    .sedi .sedili {width:100%; display:flex; gap:15px;flex-wrap:wrap; justify-content: space-between;}
+    .sedili .cdbt {width:200px; height:50px; background-color:#66beff; border-radius:25px; font-size:18px; color:#fff; text-align:center; line-height:50px; font-weight:600;}
+
+    #iconbox {width:100%; height:103px; margin:0 auto; position:relative; top:0; left:0;}
+    #iconbox #ib {display: flex; align-items: flex-start; align-content: flex-start; gap:37px; flex-wrap: wrap; padding:20px; position:relative; top:0;}
+    #iconbox .iconmenu {display: flex; width:40px; height: 63px; flex-direction: column; justify-content: center; align-items:center; gap:7px;}
+    .iconmenu img {width:40px; height:42px;}
+    .iconmenu .menu {font-size: 13px; font-weight:600; text-align: center;}
+    .iconmenu .menu:last-child {width:60px;}
+
+    #booklist ul {width:100%; height:595px; text-align:center; }
+    #booklist ul li img {width:460px; height:460px;}
+    #booklist ul li #bookinfo {text-align: center; margin-top:20px; display: flex; flex-direction: column; gap:10px;}
+    #booklist ul li #bookinfo .exp {color: #0080FF; font-size:15px; font-weight:500; line-height:15px; margin-bottom:10px;}
+    #booklist ul li #bookinfo .title {color:#000; font-size:24px; font-weight:700; line-height:24px; margin-bottom:20px;}
+    #booklist ul li #bookinfo .at {color:#999; font-size:15px; font-weight:500; line-height:500; line-height:15px;}
+
+    #popular #ant {height: 75px;}
+    #popular #ant ul{width:100%; height:40px; display: inline-flex; align-items: center; gap:12px; margin-bottom:15px; justify-content:center;}
+    #ant li.on {width:115px; height:40px; border-radius:20px; background: #0080FF; color:#fff; font-size:16px; line-height:40px; text-align:center;}
+    #ant li {width:115px; height:40px; border-radius:20px; border:2px solid #0080FF; color:#0080FF; font-size:16px; line-height:40px; text-align:center;}
+    #ant .time {font-size: 15px; color:#999; text-align:right; font-weight:500; float:right; line-height:15px;}
+
+    #middlebanner {width:100%; height: 232px; text-align: center; padding:30px; background-color: #eee; margin-top:20px; display:flex; gap:20px; justify-content:center;}
+    #middlebanner .ad {width:470px; height:auto;}
+    #middlebanner .ad:nth-child(2) {display:block; width:470px; height:auto;}
+
+    #value #valuelist {width:100%; height:430px; margin:0 auto; text-align: center; overflow-x:scroll;}
+    #valuelist::-webkit-scrollbar {display:none;} 
+    #vlist {width:100%; display:flex; gap:60px; justify-content:flex-start;}
+
+    #nbplist {display: flex; gap:25px; position:relative; top:286px; justify-content: center; padding:0 25px;}
+    #nbplist .nbpl {width:172px; height:320px; text-align: left;position:relative;}
+    #nbplist .nbpl:nth-child(4), .nbpl:nth-child(5) {display:block;}
+    #nbplist .nbpl img {width:172px; height: 257px;}
+
+    #rdklist {display: flex; gap:25px; position:relative; top:286px; justify-content: center; padding:0 25px;}
+    #rdklist .rdkl {width:172px; height:320px; text-align: left; position:relative;}
+    #rdklist .rdkl:nth-child(4), .rdkl:nth-child(5) {display:block;}
+    #rdklist .rdkl img {width:172px; height:257px;}
+
+    #cremaclub #clwrap {width:100%;}
+    #cclist {width:100%; height:517px; margin-top:40px; text-align:center; display: flex; gap:70px; justify-content: center; overflow:hidden;}
+    #cclist .ccl {width:100%; height: 517px; text-align: center; padding:0; display:flex; flex-direction: column; gap:1px; align-items:center;}
+    #cclist .ccl .ccmt {width:250px; font-size:14px; font-weight:400; color:#0080FF; display:block; text-align:center;}
+
+    #cclist .ccl .ccbt {width:250px; font-size:22px; font-weight:700; display:block; text-align:center; color:#000;}
+    #cclist .ccl .ccat {width:250px; font-size:14px; font-weight:400; color: #999; display:block; text-align:center; }
+
+    #cremaclub #direction {display:none;}
+
+    #earlist {display: flex; gap:25px; position:relative; top:286px; justify-content: center; padding:0 25px;}
+    #earlist .earl {width:172px; height:320px; text-align: left;position:relative;}
+    #earlist .earl:nth-child(4), .earl:nth-child(5){display:block;}
+
+    #nbplist {display: flex; gap:25px; position:relative; top:286px; justify-content: center; padding:0 25px;}
+    #nbplist .nbpl {width:172px; height:320px; text-align: left;position:relative;}
+    #nbplist .nbpl:nth-child(4) {display:block;}
+    #nbplist .nbpl img {width:172px; height: 257px;}
+
+    #rdklist {display: flex; gap:25px; position:relative; top:286px; justify-content: center; padding:0 25px;}
+    #rdklist .rdkl {width:172px; height:320px; text-align: left; position:relative;}
+    #rdklist .rdkl:nth-child(4) {display:block;}
+    #rdklist .rdkl img {width:172px; height:257px;}
+
+    #cclist {width:90%; height:517px; margin-top:40px; text-align:center; display: flex; gap:70px; justify-content: center; overflow:hidden; margin:40px auto 0;}
+    #cclist .ccl {width:100%; height: 517px; text-align: center; padding:0; display:flex; flex-direction: column; gap:1px; align-items:center;}
+    #cclist .ccl .ccmt {width:250px; font-size:14px; font-weight:400; color:#0080FF; display:block; text-align:center;}
+    #cclist .ccl .ccbt {width:250px; font-size:22px; font-weight:700; display:block; text-align:center; color:#000;}
+    #cclist .ccl .ccat {width:250px; font-size:14px; font-weight:400; color: #999; display:block; text-align:center; }
+
+    #cremaclub #direction {display:none;}
+
+    #earlist {display: flex; gap:25px; position:relative; top:286px; justify-content: center; padding:0 25px;}
+    #earlist .earl {width:172px; height:320px; text-align: left;position:relative;}
+    #earlist .earl:nth-child(4) {display:block;}
+
+    #oneq {height: 300px; margin:0 auto;}
+    #onelist {display:flex; gap:20px; flex-direction: row; justify-content: center;}
+    #onelist .olist {width:260px; height:188px; border-radius:10px;}
+    #onelist .olist img {width:100%; height:138px; border-radius:10px;}
+    .olist .listbg {width:100%; height:85px; background-color: #f8f8f8; position: relative; bottom:25px; border-radius:0 0 10px 10px; padding:5px;}
+
+    .listbg .listtitle {width:83px; height:17px; font-size:9px; color:#fff; line-height:17px; background-color: #333; text-align:center; position: relative; bottom:10px; margin-left:10px;}
+    .listbg .batt {width:216px; height:15px; display:flex; flex-direction: column; gap:5px; margin-left:10px;  line-height:15px; text-align:left;}
+    .batt .onebt {width:228px; color:#999; font-size:12px;}
+    .batt .bltt {color:#000;}
+    .batt .oneat {color:#999; font-size:8px;}
+
+    #chatting #question {height: 22%;}
+    #chatting #answer .qna.a {height:32%;}
+
+    #youtube {height:auto; margin-bottom:60px;}
+    #onlyty {text-align: center;}
+    #youtube #bookbg {width:80%;}
+    #onlyyt img {width:80%; height: auto; border-radius:20px; margin-bottom:15px;}
+    #onlyyt #ytt {width:80%; margin:0 auto;}
+
+    #event {width:94%; height:640px;}
+    #event #evtwrapper {width:800px; margin:0 auto;}
+    #event #evts {width:800px; display:flex; gap:30px; text-align:center;}
+    #evts .evl {width:100%; height:421px; display:flex; flex-direction: column; gap:20px; align-items:center;}
+    #evts .evl:nth-child(3) .plan, .evntt {color:#000;}
+    .evl .evth {width:235px; height:235px;}
+    .evtt {width:235px; height:40px; line-height:40px; display:flex; background-color: #f4f4f4; border-radius:20px;}
+    .evtt span {display:block; text-align:center;}
+    .evtt .ev {width:125px; line-height:40px; font-size: 18px; font-weight:500; background-color: #4000FF; color:#fff; border-radius:20px;}
+    .evtt .plan {width:125px; line-height:40px; font-size:16px; font-weight:400}
+
+    .evl .evntt {font-size:20px; font-weight:600;}
+    .evl .evntlt {font-size:14px; font-weight:400; color:#999;}
+
+    #event #direction {display: none;}
+    #event #halfauto {display: none;}
+
+    #service {width:90%; height:210px; margin:45px auto; padding:0 31px; text-align:center;}
+    #service .svtt {font-size:29px; font-weight:700; margin-bottom:50px;}
+    #service #svlist {width:640px; height:115px; display:flex; gap:32px; margin:0 auto;}
+    #svlist .svl {display:flex; flex-direction:column; gap:15px;}
+    #svlist .svl img {width:80px; height:80px; border-radius:18px;}
+    .svl .svt {color:#000; font-size: 17px; font-weight:500;}
+
+    
+}
+
+@media screen and (min-width: 1201px) and (max-width:1469px) {
+    body {width:92%; margin:0 auto;}
+
+    #bar {width:92%; height:100px; position:fixed; bottom:0; background: url(../img/tabletbg.png); background-size:100% 100px; z-index:9999;}
+    #bar #barbg {width:100%; height:100px;}
+    #navmenu {width:100%; padding: 13px 0; margin:0 auto; display:flex; gap:128px; align-items:flex-end;}
+    #navmenu .snm img {width:35px; height:35px; margin-bottom:12px;}
+    #navmenu .bnm img {width:75px; height:75px;}
+
+    #ftsv {display:flex; width:100%; gap:40px; margin-bottom:30px; justify-content:center;}
+    #ftsv li {width:220px; height:60px; background-color: #fff; color:#000; line-height:60px; font-size:20px; font-weight:400; border-radius:15px;}
+
+    header {width:93%; gap:57px; justify-content:center;}
+    header #searchbox img {width: 35px; height:35px; position:relative; left:90%;} 
+    #hmenu {width:90%;}
+    #hmenu .title:nth-child(7) {display:block;}
+
+    #hfmenu {width:100%; height:0; background-color:#f0f0f0; opacity:0; visibility:hidden; overflow:hidden; transition:height 0.8s ease, opacity 1s ease;}
+    #hfmenu.show {opacity: 1; visibility:visible; height:630px;  padding:43px 0; transition:height 1s ease, opacity 0.8s ease;}
+
+    #hfmenu .hbt {width:90%; height:65px; background-color:#fff; display:flex; gap:10px; border-radius:15px; margin: 0 auto; align-items:center; justify-content:center; margin-bottom:40px;}
+    .hbt span.hi {line-height:34px; color:#000; font-size:22px; font-weight:600;}
+    .hbt img.hi {width:34px; height:34px;}
+
+    #hfmenu .cadi {width:90%; margin:0 auto; margin-bottom:40px;}
+    .cadi .direct {font-size:22px; font-weight:600; margin-bottom:20px;}
+    .cadi .cadili {width:100%; display:flex; gap:15px;flex-wrap:wrap; justify-content:space-between;}
+    .cadili .cdbt {width:230px; height:50px; background-color:#66beff; border-radius:25px; font-size:18px; color:#fff; text-align:center; line-height:50px; font-weight:600;}
+
+    #hfmenu .sedi {width:90%; margin:0 auto; margin-bottom:40px;}
+    .sedi .direct {font-size:22px; font-weight:600; margin-bottom:20px;}
+    .sedi .sedili {width:100%; display:flex; gap:15px;flex-wrap:wrap; justify-content: space-between;}
+    .sedili .cdbt {width:230px; height:50px; background-color:#66beff; border-radius:25px; font-size:18px; color:#fff; text-align:center; line-height:50px; font-weight:600;}
+
+    #iconbox {width:100%; height:103px; margin:0 auto; position:relative; top:0; left:0;}
+    #iconbox #ib {display: flex; align-items: flex-start; align-content: flex-start; gap:37px; flex-wrap: wrap; padding:20px; position:relative; top:0;}
+    #iconbox .iconmenu {display: flex; width:40px; height: 63px; flex-direction: column; justify-content: center; align-items:center; gap:7px;}
+    .iconmenu img {width:40px; height:42px;}
+    .iconmenu .menu {font-size: 13px; font-weight:600; text-align: center;}
+    .iconmenu .menu:last-child {width:60px;}
+
+    #bookup {width:100%; height:285px; margin:40px auto 50px;}s
+    #uplist {text-align: center; margin:40px 0; width:100%; display:flex; gap:0; overflow: visible; justify-content:center;}
+    #uplist .bu {width: 367px; height:208px;}
+    
+    #bookup #halfauto {display:none;}
+    #bookup #direction {display:none;}
+
+    #issue {width:100%;}
+    #issue #direction {width:90%; height:30px; display:flex; gap:530px; position:relative; bottom:420px; justify-content:space-around; margin:0 auto;}
+
+    #funding #fundlist {width:1460px; display:flex; gap:40px; padding: 0; overflow-x: scroll;}
+
+    #classtf {width:100%; height: 450px; text-align: center; margin:0 auto;}
+    #classtf #clstf {width:112px; height:35px; margin: 0 auto 30px; text-align: center;}
+    #clstf .tf {font-size:29px; line-height:35px; font-weight:700; color: #000; text-align: center;}
+    #classtf #ctfwrap {width:100%;}
+    #classtf .ctfbox {height:208px;}
+    #classimg {width:100%; display:flex; gap:12px; margin: 0 auto; overflow-x:scroll; height:208px;}
+    #classimg::-webkit-scrollbar {display:none;}
+    #classimg .ctf {width:330px; height:208px;}
+    #classtf #direction {display:none;} 
+    #classtf #halfauto {display:none;}
+
+    #booklist ul {width:100%; height:595px; text-align:center; }
+    #booklist ul li img {width:460px; height:460px;}
+    #booklist ul li #bookinfo {text-align: center; margin-top:20px; display: flex; flex-direction: column; gap:10px;}
+    #booklist ul li #bookinfo .exp {color: #0080FF; font-size:15px; font-weight:500; line-height:15px; margin-bottom:10px;}
+    #booklist ul li #bookinfo .title {color:#000; font-size:24px; font-weight:700; line-height:24px; margin-bottom:20px;}
+    #booklist ul li #bookinfo .at {color:#999; font-size:15px; font-weight:500; line-height:500; line-height:15px;}
+
+    #popular #ant {height: 75px;}
+    #popular #ant ul{width:100%; height:40px; display: inline-flex; align-items: center; gap:12px; margin-bottom:15px; justify-content:center;}
+    #ant li.on {width:115px; height:40px; border-radius:20px; background: #0080FF; color:#fff; font-size:16px; line-height:40px; text-align:center;}
+    #ant li {width:115px; height:40px; border-radius:20px; border:2px solid #0080FF; color:#0080FF; font-size:16px; line-height:40px; text-align:center;}
+    #ant .time {font-size: 15px; color:#999; text-align:right; font-weight:500; float:right; line-height:15px;}
+
+    #middlebanner {width:100%; height: 232px; text-align: center; padding:30px; background-color: #eee; margin-top:20px; display:flex; gap:20px; justify-content:center;}
+    #middlebanner .ad {width:470px; height:auto;}
+    #middlebanner .ad:nth-child(2) {display:block; width:470px; height:auto;}
+
+    #value #valuelist {width:100%; height:430px; margin:0 auto; text-align: center; overflow-x:scroll;}
+    #valuelist::-webkit-scrollbar {display:none;} 
+    #vlist {width:100%; display:flex; gap:60px; justify-content:flex-start;}
+
+    #nbplist {display: flex; gap:25px; position:relative; top:286px; justify-content: center; padding:0 25px;}
+    #nbplist .nbpl {width:172px; height:320px; text-align: left;position:relative;}
+    #nbplist .nbpl:nth-child(4), .nbpl:nth-child(5) {display:block;}
+    #nbplist .nbpl img {width:172px; height: 257px;}
+
+    #rdklist {display: flex; gap:25px; position:relative; top:286px; justify-content: center; padding:0 25px;}
+    #rdklist .rdkl {width:172px; height:320px; text-align: left; position:relative;}
+    #rdklist .rdkl:nth-child(4), .rdkl:nth-child(5) {display:block;}
+    #rdklist .rdkl img {width:172px; height:257px;}
+
+    #cremaclub #clwrap {width:100%;}
+    #cclist {width:100%; height:517px; margin-top:40px; text-align:center; display: flex; gap:70px; justify-content: center; overflow:hidden;}
+    #cclist .ccl {width:100%; height: 517px; text-align: center; padding:0; display:flex; flex-direction: column; gap:1px; align-items:center;}
+    #cclist .ccl .ccmt {width:250px; font-size:14px; font-weight:400; color:#0080FF; display:block; text-align:center;}
+
+    #cclist .ccl .ccbt {width:250px; font-size:22px; font-weight:700; display:block; text-align:center; color:#000;}
+    #cclist .ccl .ccat {width:250px; font-size:14px; font-weight:400; color: #999; display:block; text-align:center; }
+
+    #cremaclub #direction {display:none;}
+
+    #earlist {display: flex; gap:25px; position:relative; top:286px; justify-content: center; padding:0 25px;}
+    #earlist .earl {width:172px; height:320px; text-align: left;position:relative;}
+    #earlist .earl:nth-child(4), .earl:nth-child(5){display:block;}
+
+    #nbplist {display: flex; gap:25px; position:relative; top:286px; justify-content: center; padding:0 25px;}
+    #nbplist .nbpl {width:172px; height:320px; text-align: left;position:relative;}
+    #nbplist .nbpl:nth-child(4) {display:block;}
+    #nbplist .nbpl img {width:172px; height: 257px;}
+
+    #rdklist {display: flex; gap:25px; position:relative; top:286px; justify-content: center; padding:0 25px;}
+    #rdklist .rdkl {width:172px; height:320px; text-align: left; position:relative;}
+    #rdklist .rdkl:nth-child(4) {display:block;}
+    #rdklist .rdkl img {width:172px; height:257px;}
+
+    #cclist {width:90%; height:517px; margin-top:40px; text-align:center; display: flex; gap:70px; justify-content: center; overflow:hidden; margin:40px auto 0;}
+    #cclist .ccl {width:100%; height: 517px; text-align: center; padding:0; display:flex; flex-direction: column; gap:1px; align-items:center;}
+    #cclist .ccl .ccmt {width:250px; font-size:14px; font-weight:400; color:#0080FF; display:block; text-align:center;}
+    #cclist .ccl .ccbt {width:250px; font-size:22px; font-weight:700; display:block; text-align:center; color:#000;}
+    #cclist .ccl .ccat {width:250px; font-size:14px; font-weight:400; color: #999; display:block; text-align:center; }
+
+    #cremaclub #direction {display:none;}
+
+    #earlist {display: flex; gap:25px; position:relative; top:286px; justify-content: center; padding:0 25px;}
+    #earlist .earl {width:172px; height:320px; text-align: left;position:relative;}
+    #earlist .earl:nth-child(4) {display:block;}
+
+    #oneq {height: 355px; margin:0 auto;}
+    #onelist {display:flex; gap:30px; flex-direction: row; justify-content: center;}
+    #onelist .olist {width:330px; height:246px; border-radius:10px;}
+    #onelist .olist img {width:100%; height:173px; border-radius:10px;}
+    .olist .listbg {width:100%; height:98px; background-color: #f8f8f8; position: relative; bottom:25px; border-radius:0 0 10px 10px; padding:5px;}
+    .listbg .listtitle {width:123px; height:24px; font-size:13px; color:#fff; line-height:24px; background-color: #333; text-align:center; position: relative; bottom:15px; margin-left:10px;}
+    .listbg .batt {width:216px; height:15px; display:flex; flex-direction: column; gap:5px; margin-left:10px;  line-height:18px; text-align:left;}
+    .batt .onebt {width:300px; color:#999; font-size:15px;}
+    .batt .bltt {color:#000;}
+    .batt .oneat {color:#999; font-size:12px;}
+
+    #pick #pickmenu {display:flex; gap:7px; width:1010px; height:90px; margin:0 auto; padding-left:0;}
+
+    #slwrapper {overflow: unset;}
+    #salelist {display:flex; gap:30px; margin:0; justify-content:center;}
+
+    #chatting #question {height: 22%;}
+    #chatting #answer .qna.a {height:25%;}
+
+    #timesale #salelist {width:100%; height: 333px; display:flex; gap:30px; overflow:hidden; padding-left:0; justify-content:center;}
+    #daybanner 
+
+    #youtube {height:auto; margin-bottom:60px;}
+    #onlyty {text-align: center;}
+    #youtube #bookbg {width:80%;}
+    #onlyyt img {width:80%; height: auto; border-radius:20px; margin-bottom:15px;}
+    #onlyyt #ytt {width:80%; margin:0 auto;}
+
+    #event {width:94%; height:640px;}
+    #event #evtwrapper {width:90%; margin:0 auto;}
+    #event #evts {width:90%; display:flex; gap:27px; justify-content:center; text-align:center; margin:0 auto;}
+    #evts .evl {width:100%; height:421px; display:flex; flex-direction: column; gap:20px; align-items:center;}
+    #evts .evl:nth-child(3) .plan, .evntt {color:#000;}
+    .evl .evth {width:235px; height:235px;}
+    .evtt {width:235px; height:40px; line-height:40px; display:flex; background-color: #f4f4f4; border-radius:20px;}
+    .evtt span {display:block; text-align:center;}
+    .evtt .ev {width:125px; line-height:40px; font-size: 18px; font-weight:500; background-color: #4000FF; color:#fff; border-radius:20px;}
+    .evtt .plan {width:125px; line-height:40px; font-size:16px; font-weight:400}
+
+    .evl .evntt {font-size:20px; font-weight:600;}
+    .evl .evntlt {font-size:14px; font-weight:400; color:#999;}
+
+    #event #direction {display: none;}
+    #event #halfauto {display: none;}
+
+    #service {width:90%; height:210px; margin:45px auto; padding:0 31px; text-align:center;}
+    #service .svtt {font-size:29px; font-weight:700; margin-bottom:50px;}
+    #service #svlist {width:640px; height:115px; display:flex; gap:32px; margin:0 auto;}
+    #svlist .svl {display:flex; flex-direction:column; gap:15px;}
+    #svlist .svl img {width:80px; height:80px; border-radius:18px;}
+    .svl .svt {color:#000; font-size: 17px; font-weight:500;}
+
+    #review {width:90%; height:1272px;}
+    #review #popwrapper {width:100%; overflow:hidden; margin:0 auto; border-radius:0;}
+    #review #poprv {width:100%; height:324px; display:flex; margin:0 auto 30px; gap:3%; justify-content:center;}
+    #poprv .rvlist {width:30%; height:324px; border-radius:25px; background-color: #f8f8f8; display:flex; flex-direction:column; gap:0;}
+    .rvlist > img {width:100%; height:180px; border-radius:25px 25px 0 0 ;}
+    .rvlist .rvbg {width:100%; height:162px; padding:10px 20px;}
+    .rvbg .rvbk {width:90px; height:130px; float:left;}
+    .rvbg .rbinfo {display:flex; padding:10px 10px; flex-direction:column; gap:5px; text-align:left;}
+    .rbinfo .rbtt {color:#999; font-size:15px; line-height:22px; font-weight:500;}
+    .rbtt .rbb {color:#000;}
+    .rbinfo .rbat {color:#999; font-size:14px; line-height:17px;}
+    .rbinfo .rvrk {display:flex; gap:10px; text-align:center;}
+    .rvrk img {width:26px; height:26px;}
+    .rvrk .rkpt {font-size:22px; line-height:26px; font-weight: 500; color:#000;}
+    .rvrk .rkam {font-size:15px; line-height:26px; color:#999;}
+
+    #review #direction {display: none;}
+    #review #halfauto {display:none;}
+}
+@media screen and (min-width: 1470px) and (max-width:1919px) {
+    button {width:300px; height:60px; text-align:center; background-color: #0080FF; color:#fff; border:none; border-radius:30px; font-size:26px; font-weight:400; line-height:45px; display:block; margin: 40px auto; cursor: pointer;}
+    button > span {font-weight:600;}
+    #bar {display:none;}
+    
+    #topmenu {display: block; width:100%; height:50px; background-color: #0080FF; color:#fff; position:absolute; top:0; left:0;}
+    #topmenu #bothmenu {width:88%; margin:0 auto;}
+    #bothmenu #leftmenu {float:left; display: flex; gap:20px;}
+    #leftmenu .lm {font-size:15px; line-height:50px; text-align:center;}
+    #bothmenu #rightmenu {float:right; display:flex; gap:20px;}
+    #rightmenu .rm {font-size:15px; line-height:50px; text-align:center;}
+    .rm > .mimg {width:18px; height:18px; position:relative; top:3px;}
+
+    header {width:88%; margin:50px auto 0; height:160px; display:flex; gap:50px; justify-content:space-between;}
+    header #wlogo {display:block;}
+    #wlogo img {width:166px; height:60px;}
+    header #logo, #cart {display:none;}
+    header #searchbox {width:700px; height: 60px; padding:10px 20px; border:2px solid #ddd; border-radius:35px;}
+
+    header #srch {display:block; width:120px; height:60px;}
+    #srch .searching {font-size:22px; font-weight:600; line-height:60px; background-color: #0080FF; color:#fff; border-radius:30px; width:120px; height:60px; margin:0; letter-spacing:1px;}
+
+    header #smallbanner {display:block;}
+    #smallbanner {width:128px; height:80px; overflow:hidden;}
+    #smallbanner #sb {width:128px; display:flex; gap:0;}
+    #smallbanner #sb .sbi {width:128px; height:80px;} 
+    #smallbanner img {width:128px; height:80px;}
+
+    #hfmenu {display:none;}
+
+    #hm{width:100%; border-bottom:3px solid #0080FF}
+    #hmenu {width:88%; height:80px; padding: 20px 0px; display: flex; align-items:center; gap:44px; justify-content: space-between; margin:0 auto; }
+    #hmenu .title {text-align: center; font-size:20px; font-weight:700; line-height:80px; align-items:center;}
+    #hmenu >.title > .titleimg {width:35px; height:35px;  position:relative; top:8px;}
+    #hmenu > .title:nth-child(1), .title:nth-child(7), .title:nth-child(8), .title:nth-child(9), .title:nth-child(10), .title:nth-child(11), .title:nth-child(12), .title:nth-child(13) {display:block;}
+    #hmenu > .title:nth-child(2) {display:none;}
+    .title:nth-child(11), .title:nth-child(12), .title:nth-child(13) {color:#0080FF;}
+    #hmenu .title.on {display:none; color:#0080ff}
+    #hmenu > img {display:none;}
+    #hmenu img:hover {cursor: pointer;}
+
+    #whfmenu {position:absolute; top:293px; left:0; z-index:1000; width:100%; max-height:0; opacity:1; visibility:visible; overflow:hidden; transition:max-height 0.8s ease, opacity 1s ease; background-color: #fff;}
+    #whfmenu.show {max-height: 840px; opacity: 1; visibility:visible; height:auto;}
+
+    #whfmw {width:90%; height:auto; margin:0 auto; display:flex;}
+    #whfmw .wmw {display:flex; flex-direction: column; width:14%; height:auto; background-color: #0080FF;}
+    .wmw .wml {width:100%; height:80px; font-size:20px; font-weight:600; line-height:80px; text-align:center; background-color:#0080FF; color:#fff; cursor: pointer;}
+
+    #whfmw .dom {width:80%; padding:0; display:flex; gap:130px; justify-content: space-between; margin-left:70px;}
+    .dom .smw {display:flex; flex-direction: column; gap:17px; margin-top:30px; }
+    .smw .smca {font-size:17px; color:#000;}
+    .smca:hover {text-decoration: underline; cursor:pointer;}
+
+    #whfmw .whfad {width:50%; height:auto; }
+    .whfad .whadimg {width:85%; height:100%;}
+
+    #whfmw .dom, .whfad {display: none;}
+
+    #iconbox {width:85%; height:203px; margin:0 auto; position:relative; top:0; left:0; align-items: center; padding:30px 0;}
+    #iconbox #ib {height:143px; display: flex; align-items: flex-start; align-content: flex-start; gap:80px; flex-wrap: wrap; margin:0 auto; padding:20px 0 0 0; position:relative; top:0; justify-content:center;}
+    #iconbox .iconmenu {display: flex; width:50px; height:76px; flex-direction: column; justify-content: center; align-items:center; gap:10px;}
+    .iconmenu img {width:85px; height:85px;}
+    .iconmenu .menu {width:85px; font-size: 15px; font-weight:600; text-align: center;}
+    .iconmenu .menu:last-child {width:65px;}
+
+    #today {display:none;}
+
+    #tdnow {display:block; width:85%; height:480px; background:#fff; margin:50px auto;}
+    #tdnow #tdnowwrapper {display:flex; gap:30px;}
+    
+    #tdnow #tdy {width:50%; height:512px;}
+    #tdy #wtxtdate {display:flex; gap:10px; height:36px;} 
+    #tdy #wtxtdate .wdt {display:inline-block; font-size:30px; font-weight:600; line-height:36px}
+    #tdy #wtxtdate .wdt > img#rt {width:36px; height:36px; cursor:pointer;}
+
+    #booklist #tdul {width:100%; height:350px; text-align:left; margin:40px auto 70px; display:flex; overflow:hidden;}
+    #booklist #tdul li{width:100%;  display:flex; gap:50px;}
+    #booklist #tdul li img {width:350px; height:350px;}
+    #booklist #tdul li #bookinfo {width:226px; height:105px; text-align:left; margin-top:0; display: flex; flex-direction: column; gap:18px; padding-top:117px;}
+    #booklist #tdul li #bookinfo .exp {color: #0080FF; font-size:15px; font-weight:500; line-height:15px; margin:0;}
+    #booklist #tdul li #bookinfo .title {color:#000; font-size:24px; font-weight:700; line-height:24px; margin:0;}
+    #booklist #tdul li #bookinfo .at {color:#999; font-size:15px; font-weight:500; line-height:15px;}
+
+    #tdy #auto {display:block;}
+    #tdy #auto {width:75px; height:15px; display: flex; gap: 15px; margin:0 auto; margin-bottom:30px; z-index: 9999;}
+    #tdy #auto li {border-radius:10px; width:15px; height:15px; background-color: #cecece}
+    #tdy #auto li.on {background-color: #0080FF;}
+
+    #tdnow #now {width:50%; height:512px;}
+    #now #nowbook {display:flex; gap:10px; height:36px;}
+    #now #nowbook .nbt {display: inline-block; font-size:30px; font-weight:600; line-height:36px;}
+    #now #nowbook #rt {width:36px; height:36px; cursor: pointer;}
+
+    #nowlist ul {width:100%; height:350px; text-align: left; margin:40px auto 70px;}
+    #nowlist ul li{display:flex; gap:50px; justify-content:space-between;}
+    #nowlist ul li img{width:244px; height:350px;} 
+    #nowlist ul li #nbinfo {width:290px; height:105px; text-align:left; margin-top:0; display: flex; flex-direction: column; gap:18px; padding-top:30px;}
+    #nowlist ul li #nbinfo .exp {color: #0080FF; font-size:15px; font-weight:500; line-height:15px; margin:0;}
+    #nowlist ul li #nbinfo .title {color:#000; font-size:24px; font-weight:700; line-height:24px; margin:0;}
+    #nowlist ul li #nbinfo .at {color:#999; font-size:15px; font-weight:500; line-height:15px;}
+    #nowlist ul li #nbinfo .long {color:#000; font-size: 15px; font-weight:400; line-height:20px; width:290px; height:200px; text-overflow: ellipsis; word-break: break-word;}
+
+    #now #auto {display:block;}
+    #now #auto {width:105px; height:15px; display: flex; gap: 15px; margin:0 auto; margin-bottom:30px; z-index: 9999;}
+    #now #auto li {border-radius:10px; width:15px; height:15px; background-color: #cecece}
+    #now #auto li.on {background-color: #0080FF;}
+
+    #pubad {display:block; width:85%; margin:0 auto 70px;}
+    #pubad #adwrap {display: flex; gap: 30px; justify-content:space-between;}
+    #adwrap .pub {width:49%; height: auto;}
+
+    #popular {height:774px;}
+    #popular #ant {height: 114px;}
+    #popular #ant ul{width:100%; height:60px; display: inline-flex; align-items: center; gap:40px; margin-bottom:25px; justify-content:center;}
+    #ant li.on {width:150px; height:60px; border-radius:30px; background: #0080FF; color:#fff; font-size:22px; line-height:60px; text-align:center;}
+    #ant li {width:150px; height:60px; border-radius:30px; border:2px solid #0080FF; color:#0080FF; font-size:22px; line-height:60px; text-align:center;}
+    #ant .time {font-size: 18px; color:#999; text-align:right; font-weight:500; float:right; line-height:15px;}
+
+    #poplist #hot {width:100%; height: 110px; border-top:1px solid #f2f2f2; border-bottom:1px solid #f2f2f2; display: inline-block; font-size: 22px; color:#000; font-weight:500; padding:29px 13px 29px 25px;}
+    #hot span#hh {color:#f66; font-size:22px; font-weight:600; margin-right:50px;}
+    #hot img {width:90px; height:90px; margin:-21px 0; float: right;}
+    #poplist ul {margin-bottom:60px;}
+    #poplist ul .gradebox {width:100%; height:110px; border-bottom:1px solid #f2f2f2; padding: 42px 40px 42px 25px;}
+    .gradebox img {width:28px; height:28px; margin:-5px; float:right;}
+    .gradebox .grade {display:inline-block; width:40px; text-align: center; color:#000; font-size:22px; font-weight:600; margin-right:50px;}
+    .gradebox .tt {text-align:center; color:#000; font-size:22px; font-weight:400;}
+
+    #middlebanner {display:none;}
+
+    #yespub {display:block; width:85%; margin:30px auto;}
+    #yespub #ypt {font-size:30px; font-weight:700; text-align:center; margin-bottom:40px;}
+    #yespub #publist {width:100%; display:flex; gap:40px; justify-content:center;}
+    #publist .publ {width:222px; display:block; text-align:center;}
+    #publist .publ .pl{width:222px; height:auto; margin-bottom:15px; transition:0.4s;}
+    .pl:hover {transform:scale(102%); transition:0.4s}
+    #publist .publ .plt{color:#000; font-weight:600; font-size:20px;}
+
+    #yearlast {display:block; width:100%; height:auto;}
+    #yearlast img {width:100%; height:auto;}
+
+    .sline, #issue, #trend, #nobelprize, #korea, #cremaclub, #earlyreader, #adbanner, #classtf, #funding, #value, #timesale, #daybanner, #mp {display:none;}
+
+    #webcrema {display:block; width:100%; height:840px; background-color: #FFFDEA; position:relative; bottom:4px; text-align:center;}
+    #webcrema #cremalogo {width:222px; height:45px; margin-top:50px;}
+    #webcrema #wcwrap {width:85%; height:650px; margin:0 auto; padding-top:30px; text-align: center; display:flex; gap:0;}
+
+    #wcwrap #cremaselect {width:50%;}
+    #cremaselect .cst {font-size:25px; font-weight:600;}
+    #cremaselect #cswrap {width:250px; margin:0 auto;}
+    #cswrap #wcswrap {overflow:hidden; }
+    #cswrap #cclist {width:100%; height:517px; margin-top:40px; text-align:center; display: flex; gap:0px; justify-content: flex-start; }
+    #cswrap #cclist .ccl {width:100%; height: 517px; text-align: center; padding:0; display:flex; flex-direction: column; gap:1px; align-items:center;}
+
+    #cremaselect #direction {width:90%; height:30px; display:flex; gap:430px; position:relative; bottom:320px; justify-content:center; margin:0 auto;}
+
+    #wcwrap #strict {width:2px; height:395px; background-color: #392909; margin-top:70px;}
+
+    #wcwrap #cremashop {width:50%;}
+
+    #cremashop .csht {font-size:25px; font-weight:600;}
+    #cremashop #cshwrap {width:250px; overflow:hidden; margin:0 auto;}
+    #cshwrap #wshwrap {overflow: hidden;}
+    #cshwrap #cslist {width:100%; height:517px; margin-top:40px; text-align:center; display: flex; gap:0; justify-content: flex-start;  transition: 0.6s ease;}
+    #cshwrap #cslist .csl {width:100%; height: 517px; text-align: center; padding:0; display:flex; flex-direction: column; gap:1px; align-items:center;}
+    #cshwrap #cslist .csl img {width:250px; height: 365px; transition:0.4s;}
+    #cshwrap #cslist .csl img:hover {transform: scale(103%); transition:0.4s;}
+    #cslist .csl .ccmt {width:250px; font-size:14px; font-weight:400; color:#0080FF; display:block; text-align:center; margin-bottom:15px;}
+    #cslist .csl .ccbt {width:250px; font-size:22px; font-weight:700; display:block; text-align:center; margin-bottom:15px; color:#000;}
+    #cslist .csl .ccat {width:250px; font-size:14px; font-weight:400; color: #999; display:block; text-align:center; }
+
+    #cremashop #direction {width:90%; height:30px; display:flex; gap:430px; position:relative; bottom:320px; justify-content:center; margin:0 auto;}
+
+    #webcrema button#ccbtn {width:300px; height:60px; text-align:center; background-color: #392909; color:#fff; border:none; border-radius:30px; font-size:26px; font-weight:400; line-height:45px; display:block; margin: 0 auto; cursor: pointer;}
+    button > span {font-weight:600;}
+
+    #bookup {width:85%; height:320px; margin:40px auto;}
+    #uplist {text-align: center; margin:40px 0; width:100%; display:flex; gap:15px; overflow: visible; justify-content:center;}
+    #uplist .bu {width: 405px; height:225px;}
+    
+    #bookup #halfauto {display:none;}
+    #bookup #direction {display:none;}
+
+    #pick {width:100%; height:745px; margin:0 auto; text-align:center; overflow:hidden;}
+    #pick #pickt {display:block; margin:20px auto 40px; font-size:29px; font-weight:700;}
+    #pick #pmwrapper {overflow-x: scroll;}
+    #pmwrapper::-webkit-scrollbar{display:none;}
+    #pmwrapper #pickmenu {display:flex; gap:15px; padding:0 25px; width:1010px; height:90px; margin:0 auto;}
+    #pickmenu .pmenu {background-color: #f8f8f8; width:140px; height:90px; border-radius:12px; text-align: center; padding:10px; align-items: center; display:flex; flex-direction: column;}
+    .pmenu div {width:46px; height:46px; text-align: center; padding:8px; margin-bottom:6px;}
+    .pmenu img {width:30px; height:30px;}
+    .pmenu .mt {font-size:14px; font-weight:500; display:block; color:#000;} 
+    #pickmenu .pmenu.on {background-color: #0080FF;}
+    #pickmenu .pmenu.on .mt.on {color:#fff;}
+    #pickmenu .pmenu.on .icons.on {background:#fff; border-radius:30px;}
+
+    #pick #ltca {display:flex; gap:50px; margin:0 auto; justify-content: center; margin:30px; cursor: pointer;}
+    #ltca .cate {font-size:20px; font-weight:400; color:#999;}
+    #ltca .cate.on {font-weight:600; color:#0080FF;}
+
+    #pick #yplist {display:flex; width:85%; margin:0 auto;}
+    #yplist ul {width:100%; display:inline-flex; justify-items: flex-start; align-items: flex-start;  cursor: pointer;}
+    .plist{width:50%; height:400px; border:0.5px solid #e2e2e2; padding:20px; text-align: center;} 
+    .plist img {width:270px; height:270px;}
+    .plist .st {font-size:14px; font-weight:400; color: #0080FF; margin:10px auto; line-height:17px; display:block;}
+    .plist .bt {font-size:18px; font-weight:600; color:#000; display:block; margin-bottom:10px; width:269px; white-space: nowrap; text-overflow: ellipsis; overflow:hidden; display:block; margin:0 auto 10px;}
+    .plist .tat {font-size:14px; font-weight:400; color:#999; line-height:17px; display:block;}
+
+    #wmp {display:block;}
+    #wmp #chatbg {height: 560px;}
+    #chatbg #chatting {width:85%; margin:0 auto;}
+    #chatting #question {height: 22%;}
+    #chatting #answer .qna.a {height:25%;}
+    #wmp button.more.qunan {width:300px; height:60px; text-align:center; background-color: #993; color:#fff; border:none; border-radius:30px; font-size:26px; font-weight:400; line-height:45px; display:block; margin: 40px auto; cursor: pointer;}
+    button > span {font-weight:600;}
+
+    #youtube {width:85%; height:auto; text-align:center; margin-bottom:50px; margin:0 auto;}
+    #youtube #yt {display: none;} 
+    #youtube #ytnbtn {display: flex; align-items:center; height:60px; justify-content: space-between; margin-bottom:40px;}
+    #ytnbtn > .ytbtn {display:block; margin:0; width:300px;}
+    #ytnbtn > #yt {display:block; text-align: left; font-size:29px; font-weight:700; line-height:60px; margin-bottom:0;}
+    
+    #onlyyt {display:none;}
+    #youtube #rlbook {display:none;}
+    #youtube #bookbg {display:none;}
+
+    #wonlyyt {display:flex; margin-bottom:60px; gap:40px;}
+    #wonlyyt img {width:60%; height: auto; border-radius:20px; margin-bottom: 0;}
+    #wonlyyt #wytt {text-align:left; font-size:22px; line-height:27px; font-weight:600;}
+
+    #wbookbg {display:flex; flex-direction: column; gap:20px; justify-content:space-between;}
+    #wbookbg #wrlbook {font-size:22px; font-weight:500; color:#999; text-align:left;}
+    #youtube #bookbg {width:100%; height:300px; margin:0 auto; background-color: #f8f8f8; border-radius:10px; margin-top:15px; padding:30px;}
+    #wbookbg img {width:160px; height:240px; float: left; border:1px solid #d9d9d9;}
+    #wbookbg #wcoldhand {display:flex; flex-direction: column; gap: 20px; text-align:left; padding:0 30px;} 
+    #wcoldhand li:first-child {font-size:25px; font-weight:600;}
+    #wcoldhand li:nth-child(2), li:nth-child(3) {font-size:20px; color:#999;}
+    
+    button.ytbtn {display:none;}
+
+    #oneq {width:100%; background-color: rgba(0, 128, 255, 0.2); padding-top:30px; height: 1025px; margin:0 auto;}
+    #oneq #wlogo {display:block; width:236px; height:62px; margin:0 auto 30px;}
+    #oneq #oneqbook .easy {display:none;}
+    #oneq #onewrap {display:block; width:85%; height:800px; margin:0 auto;}
+    #onelist {display:flex; gap:30px; flex-direction: row; justify-content: center;}
+    #onelist .olist {width:360px; height: 276px; border-radius:10px;}
+    #onelist .olist img {width:100%; height:188px; border-radius:10px;}
+    .olist .listbg {width:100%; height:98px; background-color: #f8f8f8; position: relative; bottom:25px; border-radius:0 0 10px 10px; padding:5px;}
+
+    .listbg .listtitle {width:123px; height:24px; font-size:13px; color:#fff; line-height:24px; background-color: #333; text-align:center; position: relative; bottom:15px; margin-left:10px;}
+    .listbg .batt {width:216px; height:15px; display:flex; flex-direction: column; gap:5px; margin-left:10px;  line-height:18px; text-align:left;}
+    .batt .onebt {width:300px; color:#999; font-size:15px;}
+    .batt .bltt {color:#000;}
+    .batt .oneat {color:#999; font-size:12px;}
+    
+    #oneq #readlist {display:block; margin-top:40px;}
+    #readlist #readt {font-size:29px; font-weight:700; margin:0 auto 40px; }
+    #readlist #relist {display:flex; gap:30px; flex-direction: row; justify-content: center;}
+    #readlist #relist .rlist {width:360px; height:300px; }
+    #relist .rlist img {width:100%; height:245px; transition:0.4s;}
+    #relist .rlist img:hover {transform: scale(105%); transition:0.4s;}
+    #relist .rlistt {font-size:20px; font-weight:600; text-align:left; color:#000; margin-top:10px;} 
+
+    #oneq button {display:block;}
+
+    #sarakzone {display:block; width:85%; margin:50px auto; text-align:center;}
+    #sarakzone #saraklogo {margin:0 auto 30px; width:173px; height:60px; }
+    #saraklist {display:flex; gap:30px; justify-content:center;}
+    #saraklist .sklist {width:290px; height:283px; display:flex; flex-direction:column; gap:10px; text-align:left;}
+    .sklist .seimg {width:100%; height:auto;}
+    .sklist .set {font-size:22px; font-weight:600; color:#000;}
+    .sklist .selt {font-size:16px; font-weight:500; color:#999;}
+    #sarakzone button {display:block;}
+
+    #cardbanner {display:block;}
+    #cardbanner #cardban {width:100%; height:auto;}
+
+    #review {width:85%; height:520px; margin:40px auto;}
+    #rvt .rc {display:none;}
+    #review #popwrapper {width:100%; overflow:hidden; margin:0 auto; border-radius:0;}
+    #popwrapper #poprv {width:100%; height:310px; display:flex; margin:0 auto 30px; gap:3%; justify-content:center;}
+    #poprv .rvlist {width:35%; height:310px; border-radius:20px; background-color: #f8f8f8; display:flex; flex-direction:column; gap:0;}
+    .rvlist > img {display:none;}
+    .rvlist > .wimg {display:block; width:100%; height:180px; border-radius:20px 20px 0 0 ;}
+    .rvlist .rvbg {width:100%; height:162px; padding:10px 20px;}
+    .rvbg .rvbk {width:80px; height:105px; float:left;}
+    .rvbg .rbinfo {display:flex; padding:10px 10px; flex-direction:column; gap:5px; text-align:left;}
+    .rbinfo .rbtt {color:#999; font-size: 18px; line-height:22px; font-weight:500;}
+    .rbtt .rbb {font-size:18px; color:#000;}
+    .rbinfo .rbat {color:#999; font-size:14px; line-height:17px;}
+    .rbinfo .rvrk {display:flex; gap:10px; text-align:center;}
+    .rvrk img {width:26px; height:26px;}
+    .rvrk .rkpt {font-size:22px; line-height:26px; font-weight: 500; color:#000;}
+    .rvrk .rkam {font-size:15px; line-height:26px; color:#999;}
+
+    #review #halfauto {display:none;}
+    #review #direction {display:none;}
+    #review #twlist, #thisweek {display:none;}
+
+    #event {width: 85%; height:640px; margin:0 auto;}
+    #eventt .ct {display:none;}
+    #eventt .tm {display:none;}
+    #eventt .ctm {display:block; font-size:30px; font-weight:600;}
+    #event #evtwrapper {width:100%; margin:0 auto;}
+    #event #evts {width:100%; display:flex; gap:27px; justify-content:center; text-align:center; margin:0 auto;}
+    #evts .evl {width:265px; height:421px; display:flex; flex-direction: column; gap:20px; align-items:center;}
+    #evts .evl:nth-child(3) .plan, .evntt {color:#000;}
+    #evts .evl:nth-child(4) {display:block; width:265px; height:421px; display:flex; flex-direction: column; gap:20px; align-items:center;}
+    .evl .evth {width:235px; height:235px;}
+    .evtt {width:235px; height:40px; line-height:40px; display:flex; background-color: #f4f4f4; border-radius:20px;}
+    .evtt span {display:block; text-align:center;}
+    .evtt .ev {width:125px; line-height:40px; font-size: 18px; font-weight:500; background-color: #4000FF; color:#fff; border-radius:20px;}
+    .evtt .plan {width:125px; line-height:40px; font-size:16px; font-weight:400}
+
+    .evl .evntt {font-size:20px; font-weight:600;}
+    .evl .evntlt {font-size:14px; font-weight:400; color:#999;}
+
+    #event #direction {display: none;}
+    #event #halfauto {display: none;}
+
+    #service {width:85%; height:242px; margin:45px auto; padding:0; text-align:center;}
+    #service .svtt {font-size:29px; font-weight:700; margin-bottom:50px;}
+    #service #svlist {width:100%; height:154px; display:flex; gap:60px; margin:0 auto; justify-content:center;}
+    #svlist .svl {width:110px; height:154px; display:flex; flex-direction:column; gap:15px;}
+    #svlist .svl img {width:110px; height:110px; border-radius:18px;}
+    .svl .svt {color:#000; font-size: 20px; font-weight:500; width:110px;}
+
+    #notice {width:100%; border-top:2px solid #d9d9d9;}
+    #notice #realnt {display:none;}
+    #notice #wrealnt {width:76%; height:115px; padding:40px 0; display:flex; gap:30px; margin:0 auto; justify-content:space-around; align-items:center;}
+    #wrealnt .biglong {font-size:25px; font-weight:600;}
+    #wrealnt .smalllong {font-size:18px; font-weight:500; line-height:35px;}
+    .smalllong .ntdate {color:#999;}
+
+    #wrealnt .ntmore {width:125px; height:35px; line-height:35px; background-color: #ebebeb; font-size:20px; color:#000; text-align:center; border-radius:20px;} 
+
+    #notice #direction {display:none;}
+
+    footer {display:none;}
+
+    #wfooter {display:block; width:100%; height:378px; background-color: #041242; padding:0;}
+    #wfooter #footwrap {width:100%; margin:0 auto;}
+    #footwrap #wft {width:76%; height:84px; display:flex; justify-content:space-between; margin:0 auto; padding:30px 0;}
+    #wft .meli {width:100%; display: flex; gap:20px; justify-content:center; align-items:center;}
+    #wft .meli .meti {color:#fff; font-size: 13px;font-weight:500; width:110px;}
+    .meti:nth-child(4) {font-weight:700 !important;}
+    #wft .iconlist {display:none;}
+    
+    #wfooter #line {width:100%; height:2px; background-color: #fff;}
+    
+    #wfooter #extrainfo {width:80%; margin:40px auto; display:flex; justify-content: space-between;}
+    #extrainfo #flzone {width:226px; height:170px; padding:40px 0;}
+    #flzone .ftlogo {width:226px; height:90px;}
+
+    #extrainfo #textinfo {color:#fff; text-align:left; display:flex; flex-direction: column; gap:10px; font-weight:400}
+    #textinfo .comp {font-weight:600; font-size:20px;} 
+    #textinfo .comex {color:#fff; font-size:13px;}
+    #textinfo .comex .bold {text-decoration:underline;}
+
+    #wfooter #cs {display:flex; flex-direction:column; gap:20px; text-align:left;}
+    #cs .csm {color:#fff; font-size:20px; font-weight:600;}
+    #cs .cst {color:#fff;}
+    .cst .cstw {display: flex; gap:10px; align-items:center;}
+    .cstw .bm {font-size:13px; font-weight:400; line-height:19px; display:flex; align-items:center;}
+    .cstw .bme {font-size:13px; font-weight:400; line-height:19px; display:flex; align-items:center; text-decoration:underline;}
+    .cstw .bme .wright {width:19px; height:19px;}
+    #cs .csb {display:flex; gap:20px;}
+    .csb .csbt {display:inline-block; width:90px; height:40px; background-color: #fff; color:#000; border-radius:10px; font-size:11px; line-height:40px; text-align:center;}
+
+    #wfooter #csas {width:80%; display:flex; gap:10px; font-size:16px; color:#fff; margin:0 auto;}
+    #csas .csaf {font-weight:600; font-size:13px; line-height:19px;}
+    #csas .sgi {width:95px; height:19px;}
+    #csas .cssv {display:flex; align-items:center;}
+    .cssv .cssvimg {width:19px; height:19px;  font-weight:600;}
+}
+
+@media screen and (min-width: 1920px) and (max-width:2200px) {
+    button {width:300px; height:60px; text-align:center; background-color: #0080FF; color:#fff; border:none; border-radius:30px; font-size:26px; font-weight:400; line-height:45px; display:block; margin: 40px auto; cursor: pointer;}
+    button > span {font-weight:600;}
+    #bar {display:none;}
+    
+    #topmenu {display: block; width:100%; height:50px; background-color: #0080FF; color:#fff; position:absolute; top:0; left:0;}
+    #topmenu #bothmenu {width:76%; margin:0 auto; height:50px;}
+    #bothmenu #leftmenu {float:left; display: flex; gap:20px;}
+    #leftmenu .lm {font-size:15px; line-height:50px; text-align:center;}
+    #bothmenu #rightmenu {float:right; display:flex; gap:20px;}
+    #rightmenu .rm {font-size:15px; line-height:50px; text-align:center;}
+    .rm > .mimg {width:18px; height:18px; position:relative; top:3px;}
+
+    header {width:76%; margin:50px auto 0; height:160px; display:flex; gap:50px; justify-content:space-between;}
+    header #wlogo {display:block;}
+    #wlogo img {width:166px; height:60px;}
+    header #logo, #cart {display:none;}
+    header #searchbox {width:800px; height: 60px; padding:10px 20px; border:2px solid #ddd; border-radius:35px;}
+
+    header #srch {display:block; width:120px; height:60px;}
+    #srch .searching {font-size:22px; font-weight:600; line-height:60px; background-color: #0080FF; color:#fff; border-radius:30px; width:120px; height:60px; margin:0; letter-spacing:1px;}
+
+    header #smallbanner {display:block;}
+    #smallbanner {width:128px; height:80px;}
+    #smallbanner #sb {width:128px; display:flex; gap:0; overflow:hidden;}
+    #smallbanner #sb .sbi {width:128px; height:80px;}
+
+    #hfmenu {display:none;}
+
+    #hm{width:100%; border-bottom:3px solid #0080FF}
+    #hmenu {width:76%; height:80px; padding: 20px 0px; display: flex; align-items:center; gap:44px; justify-content: space-between; margin:0 auto; }
+    #hmenu .title {text-align: center; font-size:25px; font-weight:700; line-height:80px; align-items:center; }
+    #hmenu >.title > .titleimg {width:40px; height:40px;  position:relative; top:12px;}
+    #hmenu > .title:nth-child(1), .title:nth-child(7), .title:nth-child(8), .title:nth-child(9), .title:nth-child(10), .title:nth-child(11), .title:nth-child(12), .title:nth-child(13) {display:block;}
+    .title:nth-child(11), .title:nth-child(12), .title:nth-child(13) {color:#0080FF;}
+    #hmenu > .title:nth-child(2) {display:none;}
+    #hmenu .title.on {display:none; color:#0080ff}
+    #hmenu > img {display:none;}
+    #hmenu img:hover {cursor: pointer;}
+
+    #whfmenu {position:absolute; top:293px; left:0; z-index:1000; width:100%; max-height:0; opacity:1; visibility:visible; overflow:hidden; transition:max-height 0.8s ease, opacity 1s ease; background-color: #fff;}
+    #whfmenu.show {max-height: 840px; opacity: 1; visibility:visible; height:auto;}
+
+    #whfmw {width:90%; height:auto; margin:0 auto; display:flex;}
+    #whfmw .wmw {display:flex; flex-direction: column; width:14%; height:auto; background-color: #0080FF;}
+    .wmw .wml {width:100%; height:80px; font-size:20px; font-weight:600; line-height:80px; text-align:center; background-color:#0080FF; color:#fff; cursor: pointer;}
+
+    #whfmw .dom {width:80%; padding:0; display:flex; gap:130px; justify-content: space-between; margin-left:70px;}
+    .dom .smw {display:flex; flex-direction: column; gap:17px; margin-top:40px; }
+    .smw .smca {font-size:17px; color:#000;}
+    .smca:hover {text-decoration: underline; cursor:pointer;}
+
+    #whfmw .whfad {width:50%; height:auto; }
+    .whfad .whadimg {width:85%; height:100%;}
+
+    #iconbox {width:76%; height:203px; margin:0 auto; position:relative; top:0; left:0; align-items: center; padding:30px 0;}
+    #iconbox #ib {height:145px; display: flex; align-items: flex-start; align-content: flex-start; gap:40px; flex-wrap: wrap; margin:0 auto; padding:0; position:relative; top:0; justify-content:center;}
+    #iconbox .iconmenu {display: flex; width:95px; height:145px; flex-direction: column; justify-content: center; align-items:center; gap:8px;}
+    .iconmenu img {width:85px; height:85px;}
+    .iconmenu .menu {width:85px; font-size: 15px; font-weight:600; text-align: center;}
+    .iconmenu .menu:last-child {width:65px;}
+
+    #today {display:none;}
+
+    #tdnow {display:block; width:76%; height:512px; background:#fff; margin:50px auto;}
+    #tdnow #tdnowwrapper {display:flex; gap:30px;}
+    
+    #tdnow #tdy {width:50%; height:512px;}
+    #tdy #wtxtdate {display:flex; gap:10px; height:36px;} 
+    #tdy #wtxtdate .wdt {display:inline-block; font-size:30px; font-weight:600; line-height:36px}
+    #tdy #wtxtdate img#rt {width:36px; height:36px; cursor:pointer;}
+
+    #booklist ul {width:100%; height:350px; text-align:left; margin:40px auto 70px;}
+    #booklist ul li{display:flex; gap:50px;}
+    #booklist ul li img {width:350px; height:350px;}
+    #booklist ul li #bookinfo {width:226px; height:105px; text-align:left; margin-top:0; display: flex; flex-direction: column; gap:18px; padding-top:117px;}
+    #booklist ul li #bookinfo .exp {color: #0080FF; font-size:15px; font-weight:500; line-height:15px; margin:0;}
+    #booklist ul li #bookinfo .title {color:#000; font-size:24px; font-weight:700; line-height:24px; margin:0;}
+    #booklist ul li #bookinfo .at {color:#999; font-size:15px; font-weight:500; line-height:15px;}
+
+    #tdy #auto {display:block;}
+    #tdy #auto {width:75px; height:15px; display: flex; gap: 15px; margin:0 auto; margin-bottom:30px; z-index: 9999;}
+    #tdy #auto li {border-radius:10px; width:15px; height:15px; background-color: #cecece}
+    #tdy #auto li.on {background-color: #0080FF;}
+
+    #tdnow #now {width:50%; height:512px;}
+    #now #nowbook {display:flex; gap:10px; height:36px;}
+    #now #nowbook .nbt {display: inline-block; font-size:30px; font-weight:600; line-height:36px;}
+    #now #nowbook img#rt {width:36px; height:36px; cursor: pointer;}
+
+    #nowlist ul {width:100%; height:350px; text-align: left; margin:40px auto 70px;}
+    #nowlist ul li{display:flex; gap:50px; justify-content:flex-start;}
+    #nowlist ul li img{width:244px; height:350px;} 
+    #nowlist ul li #nbinfo {width:360px; height:105px; text-align:left; margin-top:0; display: flex; flex-direction: column; gap:18px; padding-top:30px;}
+    #nowlist ul li #nbinfo .exp {color: #0080FF; font-size:15px; font-weight:500; line-height:15px; margin:0;}
+    #nowlist ul li #nbinfo .title {color:#000; font-size:24px; font-weight:700; line-height:24px; margin:0;}
+    #nowlist ul li #nbinfo .at {color:#999; font-size:15px; font-weight:500; line-height:15px;}
+    #nowlist ul li #nbinfo .long {color:#000; font-size: 15px; font-weight:400; line-height:20px; width:360px; height:200px; text-overflow: ellipsis; word-break: break-word;}
+
+    #now #auto {display:block;}
+    #now #auto {width:105px; height:15px; display: flex; gap: 15px; margin:0 auto; margin-bottom:30px; z-index: 9999;}
+    #now #auto li {border-radius:10px; width:15px; height:15px; background-color: #cecece}
+    #now #auto li.on {background-color: #0080FF;}
+
+    #pubad {display:block; width:76%; margin:0 auto 70px;}
+    #pubad #adwrap {display: flex; gap: 30px; justify-content:space-between;}
+    #adwrap .pub {width:49%; height: auto;}
+
+    #popular {width:76%; height:774px;}
+    #popular #ant {height: 114px;}
+    #popular #ant ul{width:100%; height:60px; display: inline-flex; align-items: center; gap:40px; margin-bottom:25px; justify-content:center;}
+    #ant li.on {width:150px; height:60px; border-radius:30px; background: #0080FF; color:#fff; font-size:22px; line-height:60px; text-align:center;}
+    #ant li {width:150px; height:60px; border-radius:30px; border:2px solid #0080FF; color:#0080FF; font-size:22px; line-height:60px; text-align:center;}
+    #ant .time {font-size: 18px; color:#999; text-align:right; font-weight:500; float:right; line-height:15px;}
+
+    #poplist #hot {width:100%; height: 110px; border-top:1px solid #f2f2f2; border-bottom:1px solid #f2f2f2; display: inline-block; font-size: 22px; color:#000; font-weight:500; padding:29px 13px 29px 25px;}
+    #hot span#hh {color:#f66; font-size:22px; font-weight:600; margin-right:50px;}
+    #hot img {width:90px; height:90px; margin:-21px 0; float: right;}
+    #poplist ul {margin-bottom:60px;}
+    #poplist ul .gradebox {width:100%; height:110px; border-bottom:1px solid #f2f2f2; padding: 42px 40px 42px 25px;;}
+    .gradebox img {width:28px; height:28px; margin:-5px; float:right;}
+    .gradebox .grade {display:inline-block; width:40px; text-align: center; color:#000; font-size:22px; font-weight:600; margin-right:50px;}
+    .gradebox .tt {text-align:center; color:#000; font-size:22px; font-weight:400;}
+
+    #middlebanner {display:none;}
+
+    #yespub {display:block; width:76%; margin:30px auto;}
+    #yespub #ypt {font-size:30px; font-weight:700; text-align:center; margin-bottom:40px;}
+    #yespub #publist {width:100%; display:flex; gap:55px; justify-content:center;}
+    #publist .publ {width:222px; display:block; text-align:center;}
+    #publist .publ .pl{width:222px; height:auto; margin-bottom:15px;}
+    #publist .publ .plt{color:#000; font-weight:600; font-size:20px;}
+
+    #yearlast {display:block; width:100%; height:auto;}
+    #yearlast img {width:100%; height:auto;}
+
+    .sline, #issue, #trend, #nobelprize, #korea, #cremaclub, #earlyreader, #adbanner, #classtf, #funding, #value, #timesale, #daybanner, #mp {display:none;}
+
+    #webcrema {display:block; width:100%; height:840px; background-color: #FFFDEA; position:relative; bottom:4px; text-align:center;}
+    #webcrema #cremalogo {width:222px; height:45px; margin-top:50px;}
+    #webcrema #wcwrap {width:76%; height:650px; margin:0 auto; padding-top:30px; text-align: center; display:flex; gap:0;}
+
+    #wcwrap #cremaselect {width:50%;}
+    #cremaselect .cst {font-size:25px; font-weight:600;}
+    #cremaselect #cswrap {width:250px; margin:0 auto;}
+    #cswrap #wcswrap {overflow:hidden; }
+    #cswrap #cclist {width:100%; height:517px; margin-top:40px; text-align:center; display: flex; gap:0px; justify-content: flex-start; }
+    #cswrap #cclist .ccl {width:100%; height: 517px; text-align: center; padding:0; display:flex; flex-direction: column; gap:1px; align-items:center;}
+
+    #cremaselect #direction {width:90%; height:30px; display:flex; gap:430px; position:relative; bottom:320px; justify-content:center; margin:0 auto;}
+
+    #wcwrap #strict {width:2px; height:395px; background-color: #392909; margin-top:70px;}
+
+    #wcwrap #cremashop {width:50%;}
+
+    #cremashop .csht {font-size:25px; font-weight:600;}
+    #cremashop #cshwrap {width:250px; overflow:hidden; margin:0 auto;}
+    #cshwrap #wshwrap {overflow: hidden;}
+    #cshwrap #cslist {width:100%; height:517px; margin-top:40px; text-align:center; display: flex; gap:0; justify-content: flex-start;  transition: 0.6s ease;}
+    #cshwrap #cslist .csl {width:100%; height: 517px; text-align: center; padding:0; display:flex; flex-direction: column; gap:1px; align-items:center;}
+    #cshwrap #cslist .csl img {width:250px; height: 365px; transition:0.4s;}
+    #cshwrap #cslist .csl img:hover {transform: scale(103%); transition:0.4s;}
+    #cslist .csl .ccmt {width:250px; font-size:14px; font-weight:400; color:#0080FF; display:block; text-align:center; margin-bottom:15px;}
+    #cslist .csl .ccbt {width:250px; font-size:22px; font-weight:700; display:block; text-align:center; margin-bottom:15px; color:#000;}
+    #cslist .csl .ccat {width:250px; font-size:14px; font-weight:400; color: #999; display:block; text-align:center; }
+
+    #cremashop #direction {width:90%; height:30px; display:flex; gap:430px; position:relative; bottom:320px; justify-content:center; margin:0 auto;}
+
+    #webcrema button#ccbtn {width:300px; height:60px; text-align:center; background-color: #392909; color:#fff; border:none; border-radius:30px; font-size:26px; font-weight:400; line-height:45px; display:block; margin: 0 auto; cursor: pointer;}
+    button > span {font-weight:600;}
+
+    #bookup {width:76%; height:320px; margin:40px auto;}
+    #uplist {text-align: center; margin:40px 0; width:100%; display:flex; gap:15px; overflow: visible; justify-content:center;}
+    #uplist .bu {width: 405px; height:225px;}
+    
+    #bookup #halfauto {display:none;}
+    #bookup #direction {display:none;}
+
+    #pick {width:100%; height:745px; margin:0 auto; text-align:center; overflow:hidden;}
+    #pick #pickt {display:block; margin:20px auto 40px; font-size:29px; font-weight:700;}
+    #pick #pmwrapper {overflow-x: scroll;}
+    #pmwrapper::-webkit-scrollbar{display:none;}
+    #pmwrapper #pickmenu {display:flex; gap:15px; padding:0; width:1010px; height:90px; margin:0 auto;}
+    #pickmenu .pmenu {background-color: #f8f8f8; width:140px; height:90px; border-radius:12px; text-align: center; padding:10px; align-items: center; display:flex; flex-direction: column;}
+    .pmenu div {width:46px; height:46px; text-align: center; padding:8px; margin-bottom:6px;}
+    .pmenu img {width:30px; height:30px;}
+    .pmenu .mt {font-size:14px; font-weight:500; display:block; color:#000;} 
+    #pickmenu .pmenu.on {background-color: #0080FF;}
+    #pickmenu .pmenu.on .mt.on {color:#fff;}
+    #pickmenu .pmenu.on .icons.on {background:#fff; border-radius:30px;}
+
+    #pick #ltca {display:flex; gap:50px; margin:0 auto; justify-content: center; margin:30px; cursor: pointer;}
+    #ltca .cate {font-size:20px; font-weight:400; color:#999;}
+    #ltca .cate.on {font-weight:600; color:#0080FF;}
+
+    #pick #yplist {display:flex; width:76%; margin:0 auto;}
+    #yplist ul {width:100%; display:inline-flex; justify-items: flex-start; align-items: flex-start;  cursor: pointer;}
+    .plist{width:50%; height:400px; border:0.5px solid #e2e2e2; padding:20px; text-align: center;} 
+    .plist img {width:270px; height:270px;}
+    .plist .st {font-size:14px; font-weight:400; color: #0080FF; margin:10px auto; line-height:17px; display:block;}
+    .plist .bt {font-size:18px; font-weight:600; color:#000; display:block; margin-bottom:10px; width:269px; white-space: nowrap; text-overflow: ellipsis; overflow:hidden; display:block; margin:0 auto 10px;}
+    .plist .tat {font-size:14px; font-weight:400; color:#999; line-height:17px; display:block;}
+
+    #pick #direction {display:block; width:85%; height:30px; display:flex; gap:630px; position:relative; bottom:240px; justify-content:space-between; margin:0 auto;}
+
+    #wmp {display:block;}
+    #wmp #chatbg {width:100%; height: 560px;}
+    #chatbg #chatting {width:76%; margin:0 auto;}
+    #chatting #question {height: 22%;}
+    #chatting #answer .qna.a {height:25%;}
+    #wmp button.more.qunan {width:300px; height:60px; text-align:center; background-color: #993; color:#fff; border:none; border-radius:30px; font-size:26px; font-weight:400; line-height:45px; display:block; margin: 40px auto; cursor: pointer;}
+    button > span {font-weight:600;}
+
+    #youtube {width:76%; height:auto; text-align:center; margin-bottom:50px; margin:0 auto; padding:0;}
+    #youtube #yt {display: none;} 
+    #youtube #ytnbtn {display: flex; align-items:center; height:60px; justify-content: space-between; margin-bottom:40px;}
+    #ytnbtn > .ytbtn {display:block; margin:0; width:300px;}
+    #ytnbtn > #yt {display:block; text-align: left; font-size:29px; font-weight:700; line-height:60px; margin-bottom:0;}
+    
+    #onlyyt {display:none;}
+    #youtube #rlbook {display:none;}
+    #youtube #bookbg {display:none;}
+
+    #wonlyyt {display:flex; margin-bottom:60px; gap:40px;}
+    #wonlyyt img {width:60%; height: auto; border-radius:20px; margin-bottom: 0;}
+    #wonlyyt #wytt {text-align:left; font-size:22px; line-height:27px; font-weight:600;}
+
+    #wbookbg {display:flex; flex-direction: column; gap:20px; justify-content:space-between;}
+    #wbookbg #wrlbook {font-size:22px; font-weight:500; color:#999; text-align:left;}
+    #youtube #bookbg {width:100%; height:300px; margin:0 auto; background-color: #f8f8f8; border-radius:20px; margin-top:15px; padding:30px;}
+    #wbookbg img {width:160px; height:240px; float: left; border:1px solid #d9d9d9;}
+    #wbookbg #wcoldhand {display:flex; flex-direction: column; gap: 20px; text-align:left; padding:0 30px;} 
+    #wcoldhand li:first-child {font-size:25px; font-weight:600;}
+    #wcoldhand li:nth-child(2), li:nth-child(3) {font-size:20px; color:#999;}
+    
+    button.ytbtn {display:none;}
+
+    #oneq {width:100%; background-color: rgba(0, 128, 255, 0.1); padding-top:30px; height: 1250px; margin:0 auto;}
+    #oneq #wlogo {display:block; width:236px; height:62px; margin:0 auto 30px;}
+    #oneq #oneqbook .easy {display:none;}
+    #oneq #onewrap {display:block; width:85%; height:800px; margin:0 auto;}
+    #onelist {display:flex; gap:30px; flex-direction: row; justify-content: center;}
+    #onelist .olist {width:470px; height: 360px; border-radius:30px;}
+    #onelist .olist img {width:100%; height:240px; border-radius:30px;}
+    .olist .listbg {width:100%; height:120px; background-color: #f8f8f8; position: relative; bottom:25px; border-radius:0 0 30px 30px; padding:15px;}
+    .listbg .listtitle {width:159px; height:33px; font-size:16px; color:#fff; line-height:33px; background-color: #333; text-align:center; position: relative; bottom:30px; margin-left:10px;}
+    .listbg .batt {width:420px; height:73px; display:flex; flex-direction: column; gap:10px; margin-left:10px;  line-height:18px; text-align:left; position:relative; bottom:10px;}
+    .batt .onebt {width:410px; color:#999; font-size:18px;}
+    .batt .bltt {color:#000;}
+    .batt .oneat {color:#999; font-size:16px;}
+    
+    #oneq #readlist {display:block; margin-top:40px;}
+    #readlist #readt {font-size:29px; font-weight:700; margin:0 auto 40px; }
+    #readlist #relist {display:flex; gap:30px; flex-direction: row; justify-content: center; height:402px;}
+    #readlist #relist .rlist {width:470px; height:402px; }
+    #relist .rlist img {width:100%; height:320px; border-radius:30px; transition:0.4s;}
+    #relist .rlist img:hover {transform: scale(105%); transition:0.4s;}
+    #relist .rlistt {font-size:26px; font-weight:600; text-align:left; color:#000; margin-top:15px;}
+
+    #oneq button {display:block;}
+
+    #sarakzone {display:block; width:76%; margin:50px auto; text-align:center;}
+    #sarakzone #saraklogo {margin:0 auto 30px; width:173px; height:60px; }
+    #saraklist {display:flex; gap:50px; justify-content:center;}
+    #saraklist .sklist {width:330px; height:323px; display:flex; flex-direction:column; gap:10px; text-align:left;}
+    .sklist .seimg {width:100%; height:auto;}
+    .sklist .set {font-size:26px; font-weight:600; color:#000;}
+    .sklist .selt {font-size:20px; font-weight:500; color:#999;}
+    #sarakzone button {display:block;}
+
+    #cardbanner {display:block;}
+    #cardbanner #cardban {width:100%; height:auto;}
+
+    #review {width:76%; height:550px; margin:40px auto;}
+    #rvt .rc {display:none;}
+    #review #popwrapper {width:100%; overflow:hidden; margin:0 auto; border-radius:0;}
+    #popwrapper #poprv {width:100%; height:330px; display:flex; margin:0 auto 30px; gap:3%; justify-content:center;}
+    #poprv .rvlist {width:35%; height:330px; border-radius:20px; background-color: #f8f8f8; display:flex; flex-direction:column; gap:0;}
+    .rvlist > img {display:none;}
+    .rvlist > .wimg {display:block; width:100%; height:200px; border-radius:20px 20px 0 0 ;}
+    .rvlist .rvbg {width:100%; height:162px; padding:10px 20px;}
+    .rvbg .rvbk {width:80px; height:105px; float:left;}
+    .rvbg .rbinfo {display:flex; padding:10px 10px; flex-direction:column; gap:5px; text-align:left;}
+    .rbinfo .rbtt {color:#999; font-size: 18px; line-height:22px; font-weight:500;}
+    .rbtt .rbb {font-size:18px; color:#000;}
+    .rbinfo .rbat {color:#999; font-size:14px; line-height:17px;}
+    .rbinfo .rvrk {display:flex; gap:10px; text-align:center;}
+    .rvrk img {width:26px; height:26px;}
+    .rvrk .rkpt {font-size:22px; line-height:26px; font-weight: 500; color:#000;}
+    .rvrk .rkam {font-size:15px; line-height:26px; color:#999;}
+
+    #review #halfauto {display:none;}
+    #review #direction {display:none;}
+    #review #twlist, #thisweek {display:none;}
+
+    #event {width:76%; height:640px; margin:0 auto;}
+    #eventt .ct {display:none;}
+    #eventt .tm {display:none;}
+    #eventt .ctm {display:block; font-size:30px; font-weight:600;}
+    #event #evtwrapper {width:100%; margin:0 auto;}
+    #event #evts {width:100%; display:flex; gap:60px; justify-content:center; text-align:center; margin:0 auto;}
+    #evts .evl {width:265px; height:421px; display:flex; flex-direction: column; gap:20px; align-items:center;}
+    #evts .evl:nth-child(3) .plan, .evntt {color:#000;}
+    #evts .evl:nth-child(4) {display:block; width:265px; height:421px; display:flex; flex-direction: column; gap:20px; align-items:center;}
+    .evl .evth {width:235px; height:235px;}
+    .evtt {width:235px; height:40px; line-height:40px; display:flex; background-color: #f4f4f4; border-radius:20px;}
+    .evtt span {display:block; text-align:center;}
+    .evtt .ev {width:125px; line-height:40px; font-size: 22px; font-weight:500; background-color: #4000FF; color:#fff; border-radius:20px;}
+    .evtt .plan {width:105px; line-height:40px; font-size:20px; font-weight:400;} 
+
+    .evl .evntt {font-size:20px; font-weight:600;}
+    .evl .evntlt {font-size:14px; font-weight:400; color:#999;}
+
+    #event #direction {display: none;}
+    #event #halfauto {display: none;}
+
+    #service {width:85%; height:242px; margin:45px auto; padding:0; text-align:center;}
+    #service .svtt {font-size:29px; font-weight:700; margin-bottom:50px;}
+    #service #svlist {width:100%; height:154px; display:flex; gap:60px; margin:0 auto; justify-content:center;}
+    #svlist .svl {width:110px; height:154px; display:flex; flex-direction:column; gap:15px;}
+    #svlist .svl img {width:110px; height:110px; border-radius:18px;}
+    .svl .svt {color:#000; font-size: 20px; font-weight:500; width:110px;}
+
+    #notice {width:100%; border-top:2px solid #d9d9d9;}
+    #notice #realnt {display:none;}
+    #notice #wrealnt {width:85%; height:115px; padding:40px; display:flex; gap:30px; margin:0 auto; justify-content:space-around; align-items:center;}
+    #wrealnt .biglong {font-size:25px; font-weight:600;}
+    #wrealnt .smalllong {font-size:18px; font-weight:500; line-height:35px;}
+    .smalllong .ntdate {color:#999;}
+
+    #wrealnt .ntmore {width:125px; height:35px; line-height:35px; background-color: #ebebeb; font-size:20px; color:#000; text-align:center; border-radius:20px;} 
+
+    #notice #direction {display:none;}
+
+    footer {display:none;}
+
+    #wfooter {display:block; width:100%; height:378px; background-color: #041242; padding:0;}
+    #wfooter #footwrap {width:100%; margin:0 auto;}
+    #footwrap #wft {width:76%; text-align:center; height:84px; display:flex; justify-content:space-between; margin:0 auto; padding:30px 0;}
+    #wft .meli {width:100%; display: flex; gap:20px; justify-content:flex-start; align-items:center;}
+    #wft .meli .meti {color:#fff; font-size: 15px;font-weight:500; width:60px;}
+    .meti:nth-child(4) {width:110px !important; font-weight:700 !important;}
+    .meti:nth-child(5), .meti:nth-child(6) {width:110px !important;} 
+    #wft .iconlist {display:flex; width:180px; height:30px; gap:20px;}
+    .iconlist .iconimg {width:30px; height:30px;}
+    .iconimg .iconlogo {width:30px; height:30px;} 
+    
+    #wfooter #line {width:100%; height:2px; background-color: #fff;}
+    
+    #wfooter #extrainfo {width:76%; margin:40px auto; display:flex; justify-content: space-between;}
+    #extrainfo #flzone {width:226px; height:170px; padding:40px 0;}
+    #flzone .ftlogo {width:226px; height:90px;}
+
+    #extrainfo #textinfo {color:#fff; text-align:left; display:flex; flex-direction: column; gap:10px; font-weight:400}
+    #textinfo .comp {font-weight:600; font-size:20px;} 
+    #textinfo .comex {color:#fff; font-size:16px;}
+    #textinfo .comex .bold {text-decoration:underline;}
+
+    #wfooter #cs {display:flex; flex-direction:column; gap:20px; text-align:left;}
+    #cs .csm {color:#fff; font-size:20px; font-weight:600;}
+    #cs .cst {color:#fff;}
+    .cst .cstw {display: flex; gap:10px; align-items:center;}
+    .cstw .bm {font-size:16px; font-weight:400; line-height:19px; display:flex; align-items:center;}
+    .cstw .bme {font-size:16px; font-weight:400; line-height:19px; display:flex; align-items:center; text-decoration:underline;}
+    .cstw .bme .wright {width:19px; height:19px;}
+    #cs .csb {display:flex; gap:20px;}
+    .csb .csbt {display:inline-block; width:90px; height:40px; background-color: #fff; color:#000; border-radius:10px; font-size:11px; line-height:40px; text-align:center;}
+
+    #wfooter #csas {width:76%; display:flex; gap:10px; font-size:16px; color:#fff; margin:0 auto;}
+    #csas .csaf {font-weight:600;}
+    #csas .sgi {width:95px; height:19px;}
+    #csas .cssv {display:flex; align-items:center; font-weight:600;}
+    .cssv .cssvimg {width:19px; height:19px;}
+}

@@ -1,0 +1,1739 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Yes24 리뉴얼</title>
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/yes24.css">
+    <link rel="shortcut icon" href="img/yesfavicon.png">
+    <link rel="stylesheet" as="style" crossorigin href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard.min.css" />
+    <script src="js/jquery-1.11.2.min.js"></script>
+    <script src="js/yes24.js"></script>
+    <script src="js/whfmenu.js"></script>
+    <style> * {font-family: "Pretendard";}</style>
+</head>
+
+<body>
+    <div id="topmenu">
+        <div id="bothmenu">
+            <div id="leftmenu">
+                <span class="lm">카트</span>
+                <span class="lm">주문/배송</span>
+                <span class="lm">고객센터</span>
+            </div>
+            <div id="rightmenu">
+                <span class="rm">카트</span>
+                <span class="rm">주문/배송</span>
+                <span class="rm">마이페이지</span>
+                <span class="rm">Global YES24<img class="mimg" src="img/globaldown.png" alt="글로벌 예스24 버튼"></span>
+            </div>
+        </div>
+    </div>
+    
+    <header>
+        <h1 id="logo"><img src="img/mobilelogo.png" alt="logo"></h1>
+        <h1 id="wlogo"><img src="img/basiclogo2.png" alt="logo"></h1>
+        <input type="text" id="searchbox">
+        <div id="srch">
+            <button class="searching">검색</button>
+        </div>
+        <h1 id="cart"><img src="img/cart.png" alt="cart"></h1>
+        <div id="smallbanner">
+            <ul id="sb">
+                <li class="sbi"><img class="sbii" src="img/sb1.png"></li>
+                <li class="sbi"><img class="sbii" src="img/sb2.png"></li>
+                <li class="sbi"><img class="sbii" src="img/sb3.png"></li>
+            </ul>
+        </div>
+    </header>
+
+    <div id="hm">
+        <div id="hmenu">
+        <span class="title"><img class="titleimg" src="img/hmenu.png"></span>
+        <span class="title">홈</span>
+        <span class="title">국내도서</span>
+        <span class="title">외국도서</span>
+        <span class="title">중고샵</span>
+        <span class="title">ebook</span>
+        <span class="title">CD/LP</span>
+        <span class="title">DVD/BD</span>
+        <span class="title">문구/GIFT</span>
+        <span class="title">티켓</span>
+        <span class="title">베스트</span>
+        <span class="title">신상품</span>
+        <span class="title">바이백</span>
+        <img class="dbtn" src="img/menudown.png" alt="더보기">
+        </div>
+    </div>
+
+    <div id="hfmenu">
+        <div class="hbt">
+            <img class="hi" src="img/home.png">
+            <span class="hi">홈</span>
+        </div>
+        <div class="cadi">
+            <p class="direct">분야 바로가기</p>
+            <ul class="cadili">
+                <li class="cdbt">국내도서</li>
+                <li class="cdbt">외국도서</li>
+                <li class="cdbt">중고샵</li>
+                <li class="cdbt">eBook</li>
+                <li class="cdbt">CD/LP</li>
+                <li class="cdbt">DVD/BD</li>
+                <li class="cdbt">문구/GIFT</li>
+                <li class="cdbt">티켓</li>
+            </ul>
+        </div>
+        <div class="sedi">
+            <p class="direct">주요 서비스 바로가기</p>
+            <ul class="sedili">
+                <li class="cdbt">채널예스</li>
+                <li class="cdbt">선물하기</li>
+                <li class="cdbt">이벤트</li>
+                <li class="cdbt">베스트</li>
+                <li class="cdbt">신상품</li>
+            </ul>
+        </div>
+        <div class="change">
+            <span class="want">원하는 메뉴 순서로 변경해 보세요</span>
+            <span class="wtb">순서 변경</span>
+        </div>
+    </div>
+
+    <div id="whfmenu">
+        <div id="whfmw">
+            <ul class="wmw">
+                <li class="wml" data-index="1">국내도서</li>
+                <li class="wml" data-index="2">외국도서</li>
+                <li class="wml" data-index="3">중고샵</li>
+                <li class="wml" data-index="4">eBook</li>
+                <li class="wml" data-index="5">CD/LP</li>
+                <li class="wml" data-index="6">DVD/BD</li>
+                <li class="wml" data-index="7">문구/GIFT</li>
+                <li class="wml" data-index="8">티켓</li>
+            </ul>
+            
+                <div class="dom" data-index="1">
+                    <ul class="smw">
+                        <li class="smca">소설/시/희곡</li>
+                        <li class="smca">에세이</li>
+                        <li class="smca">인문</li>
+                        <li class="smca">역사</li>
+                        <li class="smca">예술</li>
+                        <li class="smca">종교</li>
+                        <li class="smca">사회 정치</li>
+                        <li class="smca">자연과학</li>
+                        <li class="smca">경제 경영</li>
+                        <li class="smca">자기계발</li>
+                        <li class="smca">인물</li>
+                        <li class="smca">유아</li>
+                        <li class="smca">어린이</li>
+                        <li class="smca">청소년</li>
+                        <li class="smca">전집</li>
+                        <li class="smca">만화</li>
+                    </ul>
+                    <ul class="smw">
+                        <li class="smca">라이트노벨</li>
+                        <li class="smca">여행</li>
+                        <li class="smca">요리</li>
+                        <li class="smca">육아</li>
+                        <li class="smca">가정살림</li>
+                        <li class="smca">건강 취미</li>
+                        <li class="smca">잡지</li>
+                        <li class="smca">대학교재</li>
+                        <li class="smca">국어 외국어 사전</li>
+                        <li class="smca">IT 모바일</li>
+                        <li class="smca">공무원</li>
+                        <li class="smca">숨허서 자격증</li>
+                        <li class="smca">초등참고서</li>
+                        <li class="smca">중고등참고서</li>
+                        <li class="smca">EBS교재</li>
+                    </ul>
+                    <div class="whfad" data-index="1">
+                        <img class="whadimg" src="img/whfad.png">
+                    </div>
+                </div>
+
+                <div class="dom" data-index="2">
+                    <ul class="smw">
+                        <li class="smca">ELT 사전</li>
+                        <li class="smca">문학 소설</li>
+                        <li class="smca">경제 경영</li>
+                        <li class="smca">인문 사회</li>
+                        <li class="smca">예술 대중문화</li>
+                        <li class="smca">취미 라이프스타일</li>
+                        <li class="smca">컴퓨터</li>
+                        <li class="smca">자연과학</li>
+                        <li class="smca">대학교재 전문서</li>
+                        <li class="smca">해외잡지</li>
+                        <li class="smca">일본도서</li>
+                        <li class="smca">중국도서</li>
+                        <li class="smca">프랑스도서</li>
+                        <li class="smca">유아 어린이 청소년</li>
+                        <li class="smca">캐릭터북</li>
+                        <li class="smca">초등코스북</li>
+                    </ul>
+                    <ul class="smw">
+                        <li class="smca">학습서</li>
+                        <li class="smca">Lexile&reg;</li>
+                    </ul>
+                    <div class="whfad" data-index="2">
+                        <img class="whadimg" src="img/netflix.png">
+                    </div>
+                </div>
+
+                <div class="dom" data-index="3">
+                    <ul class="smw">
+                        <li class="smca">가정과 생활</li>
+                        <li class="smca">국어/외국어</li>
+                        <li class="smca">대학교재</li>
+                        <li class="smca">소설/시 | 에세이</li>
+                        <li class="smca">만화</li>
+                        <li class="smca">비즈니스와 경제</li>
+                        <li class="smca">자기관리</li>
+                        <li class="smca">어린이</li>
+                        <li class="smca">유아</li>
+                        <li class="smca">인문</li>
+                        <li class="smca">전집</li>
+                        <li class="smca">중고등참고서</li>
+                        <li class="smca">초등참고서</li>
+                        <li class="smca">외국도서</li>
+                    </ul>
+                    <div class="whfad" data-index="3">
+                        <img class="whadimg" src="img/liveonair.png">
+                    </div>
+                </div>
+
+                <div class="dom" data-index="4">
+                    <ul class="smw">
+                        <li class="smca">로맨스</li>
+                        <li class="smca">BL</li>
+                        <li class="smca">만화</li>
+                        <li class="smca">소설</li>
+                        <li class="smca">경제 경영</li>
+                        <li class="smca">라이트노벨</li>
+                        <li class="smca">판타지/무협</li>
+                        <li class="smca">에세이 시</li>
+                        <li class="smca">인문</li>
+                        <li class="smca">사회 정치</li>
+                        <li class="smca">자기계발</li>
+                        <li class="smca">역사</li>
+                        <li class="smca">종교</li>
+                        <li class="smca">예술 대중문화</li>
+                        <li class="smca">자연과학</li>
+                        <li class="smca">가정 살림</li>
+                    </ul>
+                    <ul class="smw">
+                        <li class="smca">건강 취미 여행</li>
+                        <li class="smca">어린이 유아</li>
+                        <li class="smca">청소년</li>
+                        <li class="smca">국어 외국어</li>
+                        <li class="smca">IT 모바일</li>
+                        <li class="smca">대학교재</li>
+                        <li class="smca">수험서 자격증</li>
+                        <li class="smca">잡지</li>
+                        <li class="smca">해외원서</li>
+                        <li class="smca">오디오북</li>
+                        <li class="smca">무료eBook</li>
+                        <li class="smca">eBook 리더기</li>
+                    </ul>
+                    <div class="whfad" data-index="4">
+                        <img class="whadimg" src="img/59payback.png">
+                    </div>
+                </div>
+
+                <div class="dom" data-index="5">
+                    <ul class="smw">
+                        <li class="smca">가요</li>
+                        <li class="smca">클래식</li>
+                        <li class="smca">POP</li>
+                        <li class="smca">ROCK</li>
+                        <li class="smca">재즈</li>
+                        <li class="smca">OST</li>
+                        <li class="smca">뮤직 DVD</li>
+                        <li class="smca">뮤직 블루레이</li>
+                        <li class="smca">유아/어린이/영상</li>
+                        <li class="smca">뉴에이지</li>
+                        <li class="smca">종교음악</li>
+                        <li class="smca">국악</li>
+                        <li class="smca">일본음악</li>
+                        <li class="smca">월드뮤직</li>
+                        <li class="smca">예약음반</li>
+                        <li class="smca">중고음반</li>
+                    </ul>
+                    <ul class="smw">
+                        <li class="smca">스타샵</li>
+                        <li class="smca">해외구매</li>
+                        <li class="smca">LP(Vinyl)샵</li>
+                        <li class="smca">스페셜샵</li>
+                    </ul>
+                    <div class="whfad" data-index="5">
+                        <img class="whadimg" src="img/gotseven.png" alt="갓세븐 미니 앨범 이벤트 배너사진">
+                    </div>
+                </div>
+
+                <div class="dom" data-index="6">
+                    <ul class="smw">
+                        <li class="smca">예약판매</li>
+                        <li class="smca">스틸북샵</li>
+                        <li class="smca">예스24 단독판매</li>
+                        <li class="smca">블루레이</li>
+                        <li class="smca">해외구매</li>
+                        <li class="smca">애니메이션</li>
+                        <li class="smca">액션/SF</li>
+                        <li class="smca">드라마/코미디</li>
+                        <li class="smca">고전/명화</li>
+                        <li class="smca">3D 블루레이</li>
+                        <li class="smca">다큐/교육</li>
+                        <li class="smca">성인(19)</li>
+                        <li class="smca">뮤직DVD</li>
+                        <li class="smca">국내외 TV드라마</li>
+                        <li class="smca">비디오/VCD</li>
+                    </ul>
+                    <ul class="smw">
+                        <li class="smca">독립,인디영화</li>
+                        <li class="smca">공포/스릴러</li>
+                    </ul>
+                    <div class="whfad" data-index="6">
+                        <img class="whadimg" src="img/endofmyhand.png">
+                    </div>
+                </div>
+
+                <div class="dom" data-index="7">
+                    <ul class="smw">
+                        <li class="smca">예스굿즈</li>
+                        <li class="smca">디자인문구</li>
+                        <li class="smca">학습/독서</li>
+                        <li class="smca">디지털</li>
+                        <li class="smca">리빙</li>
+                        <li class="smca">취미/여행</li>
+                        <li class="smca">유아/아동</li>
+                        <li class="smca">패션잡화</li>
+                        <li class="smca">반려동물</li>
+                        <li class="smca">1인샵</li>
+                    </ul>
+                    <div class="whfad" data-index="7">
+                        <img class="whadimg" src="img/nintendo.png">
+                    </div>
+                </div>
+
+                <div class="dom" data-index="8">
+                    <ul class="smw">
+                        <li class="smca">콘서트</li>
+                        <li class="smca">뮤지컬</li>
+                        <li class="smca">연극</li>
+                        <li class="smca">클래식/무용/국악</li>
+                        <li class="smca">전시/행사</li>
+                        <li class="smca">가족/아동</li>
+                        <li class="smca">엔젤티켓</li>
+                        <li class="smca">티켓오픈공지</li>
+                        <li class="smca">예매순위</li>
+                        <li class="smca">초대이벤트</li>
+                        <li class="smca">공연매거진</li>
+                        <li class="smca">MD#</li>
+                    </ul>
+                    <div class="whfad" data-index="8">
+                        <img class="whadimg" src="img/themanwholaughs.png">
+                    </div>
+                </div>
+
+
+
+        </div>
+    </div>
+    
+    <div id="wrapper">   
+        <ul class="slider">
+            <li class="banimg"><img src="img/webban1.png"></li>
+            <li class="banimg"><img src="img/webban2.png"></li>
+            <li class="banimg"><img src="img/webban3.png"></li>
+            <li class="banimg"><img src="img/webban4.png"></li>
+            <li class="banimg"><img src="img/webban5.png"></li>
+            <li class="banimg"><img src="img/webban6.png"></li>
+            <li class="banimg"><img src="img/webban7.png"></li>
+            <li class="banimg"><img src="img/webban8.png"></li>
+            <li class="banimg"><img src="img/webban9.png"></li>
+            <li class="banimg"><img src="img/webban10.png"></li>
+        </ul>
+    </div>
+
+    <section id="iconbox">
+        <div id="ib">
+        <ul class="iconmenu">
+            <li class="icon"><img src="img/check.png" alt="출석체크"></li>
+            <li class="menu">출석체크</li>
+        </ul>
+        <ul class="iconmenu">
+            <li class="icon"><img src="img/present.png" alt="사은품"></li>
+            <li class="menu">사은품</li>
+        </ul>
+        <ul class="iconmenu">
+            <li class="icon"><img src="img/benefit.png" alt="혜택모음"></li>
+            <li class="menu">혜택모음</li>
+        </ul>
+        <ul class="iconmenu">
+            <li class="icon"><img src="img/re_ssence.png" alt="리:센스"></li>
+            <li class="menu">리:센스</li>
+        </ul>
+        <ul class="iconmenu">
+            <li class="icon"><img src="img/sarak.png" alt="사락"></li>
+            <li class="menu">사락</li>
+        </ul>
+        <ul class="iconmenu">
+            <li class="icon"><img src="img/shop.png" alt="매장안내"></li>
+            <li class="menu">매장안내</li>
+        </ul>
+        <ul class="iconmenu">
+            <li class="icon"><img src="img/exclusive.png" alt="단독판매"></li>
+            <li class="menu">단독판매</li>
+        </ul>
+        <ul class="iconmenu">
+            <li class="icon"><img src="img/funding.png" alt="예스펀딩"></li>
+            <li class="menu">예스펀딩</li>
+        </ul>
+        <ul class="iconmenu">
+            <li class="icon"><img src="img/ch.yesicon.png" alt="채널예스"></li>
+            <li class="menu">채널예스</li>
+        </ul>
+        <ul class="iconmenu">
+            <li class="icon"><img src="img/crema i.png" alt="크레마클럽"></li>
+            <li class="menu">크레마클럽</li>
+        </ul>
+        </div>
+    </section>
+
+    <section id="today">
+        <div id="txtdate">
+            <span class="date">2024년 12월 9일</span>
+            <span class="book">오늘의 책</span>
+        </div>
+        <div id="booklist"> <!-- 자바스크립트 혹은 제이쿼리 적용 구역 -->
+            <ul>
+                <li>
+                    <img src="img/shield.png" alt="새왕의 방패 책 이미지">
+                    <div id="bookinfo">
+                        <span class="exp">두 천재 장인이 벌이는 숙명의 대결</span>
+                        <span class="title">새왕의 방패</span>
+                        <span class="at">이마무라 쇼고 저/이규원 역 | 북스피어</span>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <ul id="auto">
+            <li class="on"></li>
+            <li></li>
+            <li></li>
+        </ul>
+        <button type="submit" class="more"><span>오늘의 책</span> 더보기</button>
+  </section>
+
+  <!--section 오늘의 책 + 지금, 이 책 삽입 구역-->
+    <section id="tdnow">
+        <div id="tdnowwrapper">
+
+            <div id="tdy">
+                <div id="wtxtdate">
+                    <span class="wdt">2024년 12월 9일 오늘의 책</span>
+                    <img id="rt" src="img/blackr.png" alt="next">
+                </div>
+                <div id="booklist"> <!-- 자바스크립트 혹은 제이쿼리 적용 구역 -->
+                    <ul id="tdul">
+                        <li>
+                            <img src="img/shield.png" alt="새왕의 방패 책 이미지">
+                            <div id="bookinfo">
+                                <span class="exp">두 천재 장인이 벌이는 숙명의 대결</span>
+                                <span class="title">새왕의 방패</span>
+                                <span class="at">이마무라 쇼고 저/이규원 역 | 북스피어</span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+
+            <div id="now">
+                <div id="nowbook">
+                    <span class="nbt">지금, 이 책</span>
+                    <img id="rt" src="img/blackr.png" alt="next">
+                </div>
+                <div id="nowlist">
+                    <ul>
+                        <li>
+                            <img src="img/12block.png" alt="열두 개의 성공 블록 책 이미지">
+                            <div id="nbinfo">
+                                <span class="exp">성공을 위한 비즈니스 코칭</span>
+                                <span class="title">열두 개의 성공 블록</span>
+                                <span class="at">패트릭 벳-데이비드, 그레그 딘킨 저 / 박영준 역 | 서삼독</span>
+                                <p class="long">고졸 영업사원에서 1,800억 CEO가 된 자수성가 부자가 알려 주는 돈, 학벌, 인맥, 운을 뛰어넘어 압도적인 성공을 거두는 법. 미국에서 가장 유명한 연쇄 창업가인 패트릭 벳-데이비드는 지난 15년 동안 수많은 이들과의 코칭을 통해 독창적인 비즈니스 플랜 수립과 실행 방법을 개발했다. 그의 코칭에서 가장 독특한 지점은 바로 비즈니스 플랜에 강한 열정과 현실적이고 논리적인 계획이 모두 담길 수 있도록 이끌어 준다는 점이다.</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+  <!--출판사 AD 2개 삽입 구역-->
+    <div id="pubad">
+        <div id="adwrap">
+            <img class="pub" src="img/pubad.png">
+            <img class="pub" src="img/pubad2.png">
+        </div>
+    </div>
+
+  <section id="popular">
+    <div class="maintt">
+        <span class="pop">지금, 인기 있어요</span>
+    </div>
+    <div id="ant">
+        <ul>
+            <li class="on">전체</li>
+            <li>10대</li>
+            <li>20대</li>
+            <li>30대</li>
+            <li>40대</li>
+            <li>50대 이상</li>
+        </ul><br>
+        <span class="time">2024.12.09. 15:16:38 기준</span>
+    </div>
+
+    <div id="poplist">
+        <div id="hot">
+            <span id="hh">HOT</span><span>노르트스트림의 덫</span>
+            <img src="img/nortstream.png" alt="노르트스트림의 덫 표지">
+        </div>
+        <ul>
+            <li class="gradebox"><span class="grade">1</span><span class="tt">한강</span><img src="img/down.png"></li> 
+            <li class="gradebox"><span class="grade">2</span><span class="tt">riize</span><img src="img/down.png"></li>
+            <li class="gradebox"><span class="grade">3</span><span class="tt">nct wish</span><img src="img/down.png"></li>
+            <li class="gradebox"><span class="grade">4</span><span class="tt">전유진</span><img src="img/down.png"></li>
+            <li class="gradebox"><span class="grade">5</span><span class="tt">김도영</span><img src="img/down.png"></li>
+            <li class="gradebox"><span class="grade">6</span><span class="tt">뉴진스</span><img src="img/down.png"></li>
+            <li class="gradebox"><span class="grade">7</span><span class="tt">소년이 온다</span><img src="img/down.png"></li>
+            <li class="gradebox"><span class="grade">8</span><span class="tt">유시민</span><img src="img/down.png"></li>
+            <li class="gradebox"><span class="grade">9</span><span class="tt">다이어리</span><img src="img/down.png"></li>
+            <li class="gradebox"><span class="grade">10</span><span class="tt">코스모폴리탄</span><img src="img/down.png"></li>
+        </ul>
+    </div>
+    <button type="submit" class="more"><span>4위~10위</span> 더보기</button>
+  </section>
+
+  <div id="middlebanner">
+    <img class="ad" src="img/root.png" alt="중간 배너 이미지">
+    <img class="ad" src="img/sweet.png" alt="중간 배너 이미지2">
+  </div>
+
+  <section id="yespub">
+    <p id="ypt">그래제본소</p>
+    <ul id="publist">
+        <li class="publ">
+            <img class="pl" src="img/maira kalman.png">
+            <span class="plt">마이라 칼만, 우리가 인생에서 가진 것들</span>
+        </li>
+        <li class="publ">
+            <img class="pl" src="img/slience.png">
+            <span class="plt">고요의 힘</span>
+        </li>
+        <li class="publ">
+            <img class="pl" src="img/when harry.png">
+            <span class="plt">[해리가 샐리를 만났을 때] 각본집</span>
+        </li>
+        <li class="publ">
+            <img class="pl" src="img/japanani.png">
+            <span class="plt">애니만 봤는데 일본어를 잘하게 된 건에 대하여</span>
+        </li>
+        <li class="publ">
+            <img class="pl" src="img/deargrace.png">
+            <span class="plt">호텔 디어 그레이스</span>
+        </li>
+    </ul>
+  </section>
+
+  <div id="yearlast">
+    <img src="img/last.png" alt="연말총결산 배너 이미지">
+  </div>
+
+  <section id="webcrema">
+    <img id="cremalogo" src="img/webcrema.png" alt="크레마클럽 로고">
+    <div id="wcwrap">
+        <div id="cremaselect">
+            <p class="cst">크레마클럽의 선택</p>
+            <div id="cswrap">
+                <div id="wcswrap">
+                <ul id="cclist">
+                    <li class="ccl">
+                        <img src="img/onehunitmillion.png">
+                        <span class="ccmt">부자가 되고 싶은 월급쟁이들을 위한<br>머니 트레이닝</span>
+                        <span class="ccbt">딱 1억만 모읍시다</span>
+                        <span class="ccat">김경필 저 | 경이로움</span>
+                    </li>
+                    <li class="ccl">
+                        <img src="img/plastic.png">
+                        <span class="ccmt">파타고니아에서 이케아까지, 그린슈머를 사로잡은 브랜드의 플라스틱 인사이트를 배운다</span>
+                        <span class="ccbt">플라스틱은 어떻게 브랜드의 무기가 되는가</span>
+                        <span class="ccat">김병규 저 | 미래의 창</span>
+                    </li>
+                    <li class="ccl">
+                        <img src="img/howtodo.png">
+                        <span class="ccmt">소수의 성취보다 다수가 행복해지는 세상을<br>바라는 애널리스트의 경제 전망 리포트</span>
+                        <span class="ccbt">어떻게 살 것인가</span>
+                        <span class="ccat">이광수 저 | 이든하우스</span>
+                    </li>
+                </ul>
+                </div>
+            </div>
+            <ul id="direction">
+                <li>
+                    <a href="#" onclick="return false" id="prev"><img id="previ" src="img/brownleft.png" alt="prev"></a>
+                </li>
+                <li>
+                    <a href="#" onclick="return false" id="next"><img id="nexti" src="img/brownright.png" alt="next"></a>
+                </li>
+            </ul>
+        </div>
+
+        <div id="strict"></div>
+
+        <div id="cremashop">
+            <p class="csht">크레마샵 화제의 책</p>
+            <div id="cshwrap">
+                <div id="wshwrap">
+                <ul id="cslist">
+                    <li class="csl">
+                        <img src="img/proite.png">
+                        <span class="ccmt">불안정한 시기에 만나는 심리학의 거장</span>
+                        <span class="ccbt">서른에 읽는 프로이트</span>
+                        <span class="ccat">김병규 저 | 미래의 창</span>
+                    </li>
+                    <li class="csl">
+                        <img src="img/franklin.png">
+                        <span class="ccmt">300년간 미국을 이끈 위대한 작가의<br>글쓰기 수업</span>
+                        <span class="ccbt">프랭클린 글쓰기 비법</span>
+                        <span class="ccat">송숙희 저 | 유노북스</span>
+                    </li>
+                    <li class="csl">
+                        <img src="img/assethustle.png">
+                        <span class="ccmt">당신의 자산이 스스로 일하게 하라</span>
+                        <span class="ccbt">소득혁명</span>
+                        <span class="ccat">브라이언 페이지 저/김정혜 역 | 서삼독</span>
+                    </li>
+                </ul>
+                </div>
+            </div>
+            <ul id="direction">
+                <a href="#" onclick="return false" id="prev"><img id="previ" src="img/brownleft.png" alt="prev"></a>
+                <a href="#" onclick="return false" id="next"><img id="nexti" src="img/brownright.png" alt="next"></a>
+            </ul>
+        </div>
+    </div>
+    <button type="submit" id="ccbtn" class="more"><span>크레마클럽</span> 더보기</button>
+  </section>
+
+  <section id="bookup"> 
+    <div id="bookuptt">
+        <span>실시간 BOOK UP!</span> 
+    </div>
+    
+    <div id="ulwrap">
+        <div id="uplist">
+            <div id="buwrap">
+                <div class="bubox"><img class="bu" src="img/minyoki.png" alt="미뇨끼 레시피북"></div>
+                <div class="bubox"><img class="bu" src="img/hbd.png" alt="해피버쓰데이"></div>
+                <div class="bubox"><img class="bu" src="img/onemonth.png" alt="한 달 영어발음 교정"></div>
+            </div>
+        </div>
+        <ul id="direction">
+            <a href="#" onclick="return false" id="prev"><img id="previ" src="img/left.png" alt="prev"></a>
+            <a href="#" onclick="return false" id="next"><img id="nexti" src="img/right.png" alt="next"></a>
+        </ul>
+    </div>
+    <ul id="halfauto">
+        <li class="dotbtn"></li>
+        <li class="dotbtn"></li>
+        <li class="dotbtn"></li>
+    </ul>
+    </div>
+  </section>
+
+  <section id="issue">
+    <div id="issuecheck">
+        <span class="check">한눈에 이슈 체크</span>
+        <span class="hot">예스24 핫 이슈</span>
+    </div>
+    <div id="container"> <!-- 자바스크립트 혹은 제이쿼리 적용 구역 + 이슈 이미지 div:컨테이너 2개 더 제작-->
+        <div id="imgwrap">
+            <img class="issueimg" src="img/toeic.png" alt="서아쌤 토익">
+            <img class="issueimg" src="img/paper.png" alt="페이퍼 블레이드">
+            <img class="issueimg" src="img/thirty.png" alt="서른에 읽는"> 
+            <img class="issueimg" src="img/clay.png" alt="클레이 키건">  
+            <img class="issueimg" src="img/rabbit.png" alt="빤쮸토끼">
+            <img class="issueimg" src="img/skipnrofer.png" alt="스킵과 로퍼">
+            <img class="issueimg" src="img/gramophon.png" alt="그라모폰 어워즈">
+            <img class="issueimg" src="img/moon.png" alt="문성실"> 
+            <img class="issueimg" src="img/photocard.png" alt="연산호 어바등">  
+            <img class="issueimg" src="img/kakaofrd.png" alt="카카오프렌즈">
+            <img class="issueimg" src="img/2025diary.png" alt="2025 다이어리">
+            <img class="issueimg" src="img/supercoupon.png" alt="슈퍼쿠폰">
+            <img class="issueimg" src="img/50year.png" alt="50년 대여"> 
+            <img class="issueimg" src="img/firstelement.png" alt="초등 첫 문해력 신문">  
+            <img class="issueimg" src="img/cremaevent.png" alt="크레마 인증 이벤트">
+            <img class="issueimg" src="img/findwed.png" alt="수요비상금 찾기">
+        </div>
+    </div>
+
+  </section>
+
+
+  <section id="trend">
+    <div id="trendbook">
+        <span class="tdb">트렌디한 책을 찾고 있다면</span>
+        <span class="current">요즘, 뭐 읽지?</span>
+    </div>
+    <div id="trendlist">
+        <ul>
+            <li class="tdlist">
+                <img src="img/spycoast.png" alt="스파이 코스트 표지">
+                <span class="st">은퇴한 스파이의 귀환</span>
+                <p class="bt">스파이 코스트</p>
+                <span class="tat">테스 게리첸 저/박지민 역 | 미래지향</span>
+            </li>
+            <li class="tdlist">
+                <img src="img/future.png" alt="시가 된 미래에서 표지">
+                <span class="st">찬란한 '시경'의 세계 독파</span>
+                <p class="bt">시가 된 미래에서</p>
+                <span class="tat">최다정 저 | 아침달</span>
+            </li>
+        </ul>
+        <ul>
+            <li class="tdlist">
+                <img src="img/whytired.png" alt="나는 왜 배려할수록 더 힘들어질까 표지">
+                <span class="st">타인에게 이용당하지 않기</span>
+                <p class="bt">나는 왜 배려할수록 더 힘들어질까</p>
+                <span class="tat">윤사람 저 | 위즈덤하우스</span>
+            </li>
+            <li class="tdlist">
+                <img src="img/choco.png" alt="초코초코 초코해 표지">
+                <span class="st">달콤한 마법의 주문</span>
+                <p class="bt">초코초코 초코해!</p>
+                <span class="tat">한라경 글/서영 그림 | 토끼섬</span>
+            </li>
+        </ul>
+    </div>
+    <button type="submit" class="more"><span>오늘의 책</span> 더보기</button>
+  </section>
+
+  <div class="sline"></div>
+
+  <section id="nobelprize">
+    <div id="nobel">
+        <span class="ko">한국 작가 최초 수상</span>
+        <span class="np">2024 노벨문학상, 한강</span>
+    </div>
+    <div id="nbp">
+        <ul id="nbplist">
+            <li class="nbpl">
+                <img src="img/vegeterian.png">
+                <span class="nbbt">채식주의자</span>
+                <span class="nbat">한강 저</span>
+            </li>
+            <li class="nbpl">
+                <img src="img/farewell.png">
+                <span class="nbbt">이별하지 않는다</span>
+                <span class="nbat">한강 저</span>
+            </li>
+            <li class="nbpl">
+                <img src="img/yeosoo.png">
+                <span class="nbbt">여수의 사랑</span>
+                <span class="nbat">한강 저</span>
+            </li>
+            <li class="nbpl">
+                <img src="img/boycoming.png">
+                <span class="nbbt">소년이 온다</span>
+                <span class="nbat">한강 저</span>
+            </li>
+            <li class="nbpl">
+                <img src="img/dinner.png">
+                <span class="nbbt">서랍에 저녁을 넣어 두었다</span>
+                <span class="nbat">한강 저</span>
+            </li>
+            <li class="nbpl">
+                <img src="img/wind.png">
+                <span class="nbbt">바람이 분다, 가라</span>
+                <span class="nbat">한강 저</span>
+            </li>
+        </ul>
+    </div>
+    </section>
+
+    <section id="korea">
+        <div id="rk">
+            <span class="read">책으로 읽는</span>
+            <span class="demoko">민주공화국 대한민국</span>
+        </div>
+        <div id="rdk">
+            <ul id="rdklist">
+                <li class="rdkl">
+                    <img src="img/democracies.png">
+                    <span class="rdkbt">어떻게 민주주의는 무너지는가</span>
+                    <span class="rdkat">스티븐 레비츠키, 대니얼 지블랫 저</span>
+                </li>
+                <li class="rdkl">
+                    <img src="img/boycoming.png">
+                    <span class="rdkbt">소년이 온다</span>
+                    <span class="rdkat">한강 저</span>
+                </li>
+                <li class="rdkl">
+                    <img src="img/tyranny.png">
+                    <span class="rdkbt">어떻게 극단적 소수가 다수를 지배하는가</span>
+                    <span class="rdkat">스티븐 레비츠키, 대니얼 지블랫 저</span>
+                </li>
+                <li class="rdkl">
+                    <img src="img/privatethink.png">
+                    <span class="rdkbt">그의 운명에 대한 아주 개인적인 생각</span>
+                    <span class="rdkat">유시민 저</span>
+                </li>
+                <li class="rdkl">
+                    <img src="img/rewind.png">
+                    <span class="rdkbt">지금 다시, 헌법</span>
+                    <span class="rdkat">차병직, 윤재왕, 윤지영 저</span>
+                </li>
+                <li class="rdkl">
+                    <img src="img/justice.png">
+                    <span class="rdkbt">정의란 무엇인가</span>
+                    <span class="rdkat">마이클 샌델 저/김명철 역 </span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <div id="adbanner">
+        <img src="img/career.png">
+    </div>
+
+    <section id="cremaclub">
+        <div id="choice">
+            <span>크레마클럽의 선택</span> 
+        </div>
+        <div id="ccwrap">
+            <div id="clwrap">
+                <ul id="cclist">
+                    <li class="ccl">
+                        <img src="img/onehunitmillion.png">
+                        <span class="ccmt">부자가 되고 싶은 월급쟁이들을 위한<br>머니 트레이닝</span>
+                        <span class="ccbt">딱 1억만 모읍시다</span>
+                        <span class="ccat">김경필 저 | 경이로움</span>
+                    </li>
+                    <li class="ccl">
+                        <img src="img/plastic.png">
+                        <span class="ccmt">파타고니아에서 이케아까지, 그린슈머를 사로잡은 브랜드의 플라스틱 인사이트를 배운다</span>
+                        <span class="ccbt">플라스틱은 어떻게 브랜드의 무기가 되는가</span>
+                        <span class="ccat">김병규 저 | 미래의 창</span>
+                    </li>
+                    <li class="ccl">
+                        <img src="img/howtodo.png">
+                        <span class="ccmt">소수의 성취보다 다수가 행복해지는 세상을<br>바라는 애널리스트의 경제 전망 리포트</span>
+                        <span class="ccbt">어떻게 살 것인가</span>
+                        <span class="ccat">이광수 저 | 이든하우스</span>
+                    </li>
+                </ul>
+            </div>
+            <button type="submit" id="ccbtn" class="more"><span>크레마클럽</span> 더보기</button>
+            <ul id="direction">
+                <a href="#" onclick="return false" id="prev"><img id="previ" src="img/left.png" alt="prev"></a>
+                <a href="#" onclick="return false" id="next"><img id="nexti" src="img/right.png" alt="next"></a>
+            </ul>
+        </div>
+    </section>
+
+    <section id="earlyreader">
+        <div id="early">
+            <span class="magnet">북샵 사인 마그넷</span>
+            <span class="newb">얼리리더 이달의 신간</span>
+        </div>
+        <div id="ear">
+            <ul id="earlist">
+                <li class="earl">
+                    <img src="img/economist.png">
+                    <span class="earbt">2025 이코노미스트 세계대전망</span>
+                    <span class="earat">영국 이코노미스트 저</span>
+                </li>
+                <li class="earl">
+                    <img src="img/12block.png">
+                    <span class="earbt">열두 개의 성공 블록</span>
+                    <span class="earat">패트릭 벳 데이비드, 그레그 딘킨 저</span>
+                </li>
+                <li class="earl">
+                    <img src="img/humanise.png">
+                    <span class="earbt">더 인간적인 건축</span>
+                    <span class="earat">토마스 헤더윅 저/한진이 역</span>
+                </li>
+                <li class="earl">
+                    <img src="img/_van goh.png">
+                    <span class="earbt">반 고흐, 인생의 그림들</span>
+                    <span class="earat">김영숙 저</span>
+                </li>
+                <li class="earl">
+                    <img src="img/rightattitude.png">
+                    <span class="earbt">자세를 펴면 인생이 펴집니다</span>
+                    <span class="earat">송영민 저</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <div class="sline"></div>
+
+    <section id="classtf">
+        <div id="clstf">
+            <span class="tf">클래스24</span>
+        </div>
+        <div id="ctfwrap">
+            <div id="classimg">
+                <div class="ctfbox"><img class="ctf" src="img/sixtybooktalk.png"></div>
+                <div class="ctfbox"><img class="ctf" src="img/underthesea.png"></div>
+                <div class="ctfbox"><img class="ctf" src="img/happyadult.png"></div>
+                <div class="ctfbox"><img class="ctf" src="img/invest.png"></div>
+            </div>
+    
+            <ul id="halfauto">
+                <li class="dotbtn1"></li>
+                <li class="dotbtn1"></li>
+                <li class="dotbtn1"></li>
+                <li class="dotbtn1"></li>
+            </ul>
+            <button type="submit" class="more"><span>클래스24</span> 더보기</button>
+        </div>
+        <ul id="direction">
+            <a href="#" onclick="return false" id="prev"><img id="previ" src="img/left.png" alt="prev"></a>
+            <a href="#" onclick="return false" id="next"><img id="nexti" src="img/right.png" alt="next"></a>
+        </ul>
+    </section>
+
+    <section id="funding">
+        <div id="fund">
+            <span class="you">창작자의 가치를 알아보는 당신에게</span>
+            <span class="yesfund">예스펀딩</span>
+        </div>
+        <div id="fdl">
+        <ul id="fundlist">
+            <li class="fblist"><!--li 하나 더 만들어서 집어넣기-->
+                <img src="img/kalman.png">
+                <div class="fpx">
+                    <span class="fbt">마이라 칼만, 우리가 인생에서<br>가진 것들</span>
+                    <span class="percent">461% 진행중</span>
+                    <span class="price">4,607,500원</span>
+                </div>
+                <div class="fbline"></div>
+            </li>
+            <li class="fblist">
+                <img src="img/japanese.png">
+                <div class="fpx">
+                    <span class="fbt">애니만 봤더니 일본어를 잘하게<br>된 건에 대하여</span>
+                    <span class="percent">733% 진행중</span>
+                    <span class="price">7,327,650원</span>
+                </div>
+                <div class="fbline"></div>
+            </li>
+            <li class="fblist">
+                <img src="img/bitterandsweet.png">
+                <div class="fpx">
+                    <span class="fbt">쓰다 보니, 달다<br>: 명언편</span>
+                    <span class="percent">89% 진행중</span>
+                    <span class="price">888,400원</span>
+                </div>
+                <div class="fbline"></div>
+            </li>
+            <li class="fblist">
+                <img src="img/difficult.png">
+                <div class="fpx">
+                    <span class="fbt">나는 내가 어려워<br>넌 어때</span>
+                    <span class="percent">197% 진행중</span>
+                    <span class="price">1,970,460원</span>
+                </div>
+                <div class="fbline"></div>
+            </li>
+        </ul>
+        </div>
+        <button type="submit" class="more"><span>예스펀딩</span> 더보기</button>
+    </section>
+
+    <section id="value">
+        <div id="hunnit">
+            <span class="onehunnit">소장가치 100%</span>
+            <span class="only">예사에만 있어요</span>
+        </div>
+        <div id="valuelist">
+            <ul id="vlist">
+                <li class="vl">
+                    <img src="img/reunion.png">
+                    <span class="vbt">[예스리커버]<br>동급생</span>
+                    <span class="vat">프레드 울만 저/황보석 역</span>
+                </li>
+                <li class="vl">
+                    <img src="img/suba.png">
+                    <span class="vbt">[예스리커버]<br>태양 왕 수바 : 수박의 전설</span>
+                    <span class="vat">이지은 글그림</span>
+                </li>
+                <li class="vl">
+                    <img src="img/daytraining.png">
+                    <span class="vbt">[예스리커버]<br>처음부터 시작하는 주식투자<br>단타전략</span>
+                    <span class="vat">홍인기 저</span>
+                </li>
+                <li class="vl">
+                    <img src="img/startwithwhy.png">
+                    <span class="vbt">[예스리커버]<br> 스타트 위드 와이</span>
+                    <span class="vat">사이먼 시넥 저/윤혜리 역</span>
+                </li>
+                
+            </ul>
+        </div>
+        <button type="submit" class="more"><span>예스펀딩</span> 더보기</button>
+    </section>
+
+    <div class="sline"></div>
+
+    <section id="pick">
+        <span id="pickt">예스's PICK</span>
+        <div id="pmwrapper">
+            <ul id="pickmenu">
+                <li class="pmenu on">
+                    <div class="icons on">
+                        <img src="img/yesbook.png">
+                    </div>
+                    <p class="mt on">독서</p>
+                </li>
+                <li class="pmenu">
+                    <div class="icons">
+                        <img src="img/yesreaper.png">
+                    </div>
+                    <p class="mt">중고샵</p>
+                </li>
+                <li class="pmenu">
+                    <div class="icons">
+                        <img src="img/yesebook.png">
+                    </div>
+                    <p class="mt">ebook</p>
+                </li>
+                <li class="pmenu">
+                    <div class="icons">
+                        <img src="img/yesCDLP.png">
+                    </div>
+                        <p class="mt">CD/LP</p>
+                </li>
+                <li class="pmenu">
+                    <div class="icons">
+                        <img src="img/yesDVD.png">
+                    </div>
+                    <p class="mt">DVD/BD</p>
+                </li>
+                <li class="pmenu">
+                    <div class="icons">
+                        <img src="img/yesfancy.png">
+                    </div>
+                    <p class="mt">문구/GIFT</p>
+                </li>
+                <li class="pmenu">
+                    <div class="icons">
+                        <img src="img/yesticket.png">
+                    </div>
+                    <p class="mt">티켓</p>
+                </li>
+            </ul>
+        </div>
+        <ul id="ltca">
+            <li class="cate on">화제의 책</li>
+            <li class="cate">|</li>
+            <li class="cate">외국도서</li>
+            <li class="cate">|</li>
+            <li class="cate">세트도서</li>
+        </ul>
+
+        <div id="yplist"> <!--12/14 여기서 부터 수정하면서 코드 짜기-->
+            <ul>
+                <li class="plist">
+                    <img src="img/report.png">
+                    <span class="st">이동진 평론가 11월 이달의 책 선정 도서</span>
+                    <span class="bt">대온실 수리 보고서</span>
+                    <span class="tat">김금희 저</span>
+                </li>
+                <li class="plist">
+                    <img src="img/love.png">
+                    <span class="st"><리쥬라이크> 유준이네 첫 에세이</span>
+                    <span class="bt">우리는 사랑 안에 살고 있다</span>
+                    <span class="tat">유혜주, 조정연 저</span>
+                </li>
+            </ul>
+            <ul>
+                <li class="plist">
+                    <img src="img/wimpy.png">
+                    <span class="st">역대급 재미 보장! 좌충우돌 가족 시트콤</span>
+                    <span class="bt">윔피 키드 19</span>
+                    <span class="tat">제프 키니 저</span>
+                </li>
+                <li class="plist">
+                    <img src="img/study33.png">
+                    <span class="st">효율 200% 올리는 공부법</span>
+                    <span class="bt">모든 시험에 적용되는 33가지 진짜 공부법</span>
+                    <span class="tat">연수남 저</span>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="timesale">
+        <span id="sale">#기간한정특가</span>
+        <div id="slwrapper">
+            <ul id="salelist">
+                <li class="slist">
+                    <img src="img/selfoneyear.png">
+                    <span class="sp">30%</span>
+                    <div class="bkinfo">
+                        <span class="tst">2024-2025 자문자답 나의 1년</span>
+                        <div class="bbkk">
+                            <span class="tsot">16,000</span>
+                            <span class="tsst">11,700원</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="slist">
+                    <img src="img/dancingsound.png">
+                    <span class="sp">45%</span>
+                    <div class="bkinfo">
+                        <span class="tst">꼬마공룡 댄싱 사운드북</span>
+                        <div class="bbkk">
+                            <span class="tsot">18,000</span>
+                            <span class="tsst">9,900원</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="slist">
+                    <img src="img/christmas.png">
+                    <span class="sp">45%</span>
+                    <div class="bkinfo">
+                        <span class="tst">집중력 놀이 썼다 지웠다 크리스마스</span>
+                        <div class="bbkk">
+                            <span class="tsot">16,000</span>
+                            <span class="tsst">11,700원</span>
+                        </div>
+                    </div>
+                </li>
+                <li class="slist">
+                    <img src="img/kindness.png">
+                    <span class="sp">30%</span>
+                    <div class="bkinfo">
+                        <span class="tst">다정한장</span>
+                        <div class="bbkk">
+                            <span class="tsot">25,000</span>
+                            <span class="tsst">17,500원</span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="mp">
+        <div id="mpt">
+            <span class="member">예사 회원끼리 묻고 답하는</span>
+            <span class="mempre">예사롭지 않은 선물 추천</span>
+        </div>
+        <div id="chatbg">
+            <div id="chatting">
+                <img id="qsp" src="img/question.png">
+                <ul class="qp">
+                    <li>j******1</li>
+                    <li>|</li>
+                    <li>2024.11.24</li>
+                </ul>
+                <div id="question">
+                        <ul id="qc">
+                            <li>기타</li>
+                            <li>친구/인연</li>
+                        </ul>
+                        <p class="qna q">두 가지 선택지 중 무엇을 선택할지 고민하는 친구에게 선물하면 좋은 책이 있을까요? 두 선택 모두 어느 정도의 후회는 남을 것 같아 선택을 어려워하고 있어요. (소설이면 좋을 거 같아요)</p>
+                </div>
+                <img id="asp" src="img/answer.png">
+                    <ul class="ap">
+                        <li>b****8</li>
+                        <li>|</li>
+                        <li>2024.11.27</li>
+                    </ul>
+                <div id="answer">
+                    <p class="qna a">주인공 진진이 상반된 사람들(어머니와 이모/ 사랑하는 사람과 이상적인 사람)등 여러 선택지 사이에서 고민하는 내용입니다. 공감되는 문장도 많고 잘 읽히는 문체입니다. 여러사람들이 인생책으로 꼽는 소설:)</p>
+                    <span class="qna aimg">
+                        <img src="img/paradox.png">
+                        <ul id="aimgprice">
+                            <li>[도서] 모순</li>
+                            <li><b>11,700원</b> (10%)</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="more qunan"><span>추천 Q&A</span> 더보기</button>
+    </section>
+
+    <div id="daybanner">
+        <p><b>수요일에는 비상금 찾기</b></p>
+        <p>선착순 깜짝 1천원 쿠폰 증정</p>
+    </div>
+
+    <section id="youtube">
+        <span id="yt">예스24 유튜브</span>
+        <div id="ytnbtn">
+            <span id="yt">예스24 유튜브</span>
+            <button type="submit" class="ytbtn"><span>예스24 유튜브</span> 더보기</button>
+        </div>
+        <div id="onlyyt">
+            <img src="img/thumbnail.png">
+            <p id="ytt">"나중에 후회하지 말고 꼭 읽어보세요" 한강 작가 찐팬 강력 추천 | 뮤지션 밍기뉴 | YES meets</p>
+        </div>
+        <span id="rlbook">관련 도서</span>
+            <div id="bookbg">
+                <img src="img/coldhand.png">
+                <ul id="coldhand">
+                    <li>그대의 차가운 손</li>
+                    <li>한강 저 | 문학과지성사</li>
+                    <li>2024 노벨문학상 수상 작가 한강 하얀 가면 뒤에 도사린 근원적인 공포</li>
+                </ul>
+            </div>
+
+        <div id="wonlyyt">
+                <img src="img/thumbnail.png">
+            <div id="wbookbg">
+                <p id="wytt">"나중에 후회하지 말고 꼭 읽어보세요" 한강 작가 찐팬 강력 추천 | 뮤지션 밍기뉴 | YES meets</p>
+                <span id="wrlbook">관련 도서</span>
+                <div id="coldwrap">
+                    <img src="img/coldhand.png">
+                    <ul id="wcoldhand">
+                        <li>그대의 차가운 손</li>
+                        <li>한강 저 | 문학과지성사</li>
+                        <li>2024 노벨문학상 수상 작가 한강 하얀 가면 뒤에 도사린 근원적인 공포</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <button type="submit" class="ytbtn"><span>예스24 유튜브</span> 더보기</button>
+    </section>
+
+    <section id="oneq">
+        <div id="onewrap">
+        <img id="wlogo" src="img/chyeslogo.png" alt="채널예스 로고">
+        <div id="oneqbook">
+            <span class="easy">책 읽는 게 제일 쉬워요</span>
+            <span class="one">한 눈에 보는 책</span>
+        </div>
+        <ul id="onelist">
+            <li class="olist">
+                <img src="img/cardnews.png">
+                <div class="listbg">
+                    <p class="listtitle">카드뉴스로 보는 책</p>
+                    <div class="batt">
+                        <span class="onebt"><span class="bltt">인생의 해상도</span> : 단조로운 일상 속 빛나는 순간을 발견하는 감각</span>
+                        <span class="oneat">유병욱 저 |  알에이치코리아(RHK)</span>
+                    </div>
+                </div>
+            </li>
+            <li class="olist">
+                <img src="img/booktrailer.png">
+                <div class="listbg">
+                    <p class="listtitle">북트레일러</p>
+                    <div class="batt">
+                        <span class="onebt"><span class="bltt">이동 평균선 투자법</span> : 차트 분석의 시작과 끝은 이동 평균선이다</span>
+                        <span class="oneat">고지로 강사 저/김정환 역 | 이레미디어</span>
+                    </div>
+                </div>
+            </li>
+            <li class="olist">
+                <img src="img/linebook.png">
+                <div class="listbg">
+                    <p class="listtitle">한 줄로 읽는 책</p>
+                    <div class="batt">
+                        <span class="onebt"><span class="bltt">나의 막노동 일지</span> : 계속 일하며 살아가는 삶에 대하여</span>
+                        <span class="oneat">나재필 저 | 아를</span>
+                    </div>
+                </div>
+            </li>
+        </ul>
+
+        <div id="readlist">
+            <p id="readt">읽다</p>
+            <ul id="relist">
+                <li class="rlist">
+                    <img src="img/aladin.png">
+                    <p class="rlistt">웃음과 행복이 반짝이는 디즈니 코미디 뮤지컬 - 뮤지컬 &lsaquo;알라딘&rsaquo;</p>
+                </li>
+                <li class="rlist">
+                    <img src="img/poetry.png">
+                    <p class="rlistt">엉뚱하고 때론 슬프지만 끝내 자랑스러워지는 시집</p>
+                </li>
+                <li class="rlist">
+                    <img src="img/salaryman.png">
+                    <p class="rlistt">평범한 직장인의 성공적인 투자 방법</p>
+                </li>
+            </ul>
+        </div>
+        <button type="submit"><span>채널예스</span> 더보기</button>
+        </div>
+    </section>
+
+    <div class="sline"></div>
+
+    <section id="sarakzone">
+        <img id="saraklogo" src="img/sarak logo.png">
+        <ul id="saraklist">
+            <li class="sklist">
+                <img class="seimg" src="img/sarak1.png">
+                <p class="set">사락</p>
+                <p class="selt">사락 둘러보기</p>
+            </li>
+            <li class="sklist">
+                <img class="seimg" src="img/sarak2.png">
+                <p class="set">선착순 5천명 상품권</p>
+                <p class="selt">사락 앱 설치 이벤트</p>
+            </li>
+            <li class="sklist">
+                <img class="seimg" src="img/sarak3.png">
+                <p class="set">사락에서 한강 리뷰</p>
+                <p class="selt">리뷰 이벤트</p>
+            </li>
+            <li class="sklist">
+                <img class="seimg" src="img/sarak4.png">
+                <p class="set">리뷰 추천 이벤트</p>
+                <p class="selt">사락 이벤트</p>
+            </li>
+        </ul>
+        <button type="submit" class="more"><span>사락</span> 더보기</button>
+    </section>
+
+    <div id="cardbanner">
+        <img id="cardban" src="img/cardbanner.png">
+    </div>
+
+    <section id="review">
+        <div id="rvt">
+            <span class="rc">읽은 책에 대한 공감과 소통</span>
+            <span class="tw">금주의 인기 리뷰</span>
+        </div>
+        <div id="popwrapper">
+            <ul id="poprv">
+                <li class="rvlist">
+                    <img src="img/alone.png">
+                    <img class="wimg" src="img/_walonebook.png">
+                    <div class="rvbg">
+                        <img class="rvbk" src="img/alonebook.png">
+                        <div class="rbinfo">
+                            <span class="rbtt"><span class="rbb"> 너 없이 걸었다</span> : 허수경 에세이</span>
+                            <span class="rbat">허수경 저 | 난다</span>
+                            <span class="rvrk">
+                                <img src="img/bluestar.png">
+                                <span class="rkpt">9.0</span>
+                                <span class="rkam">(28건)</span>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="rvlist">
+                    <img src="img/picturepedia.png">
+                    <img class="wimg" src="img/wpicturepedia.png">
+                    <div class="rvbg">
+                        <img class="rvbk" src="img/picturebook.png">
+                        <div class="rbinfo">
+                            <span class="rbtt"><span class="rbb">그림책 수업 대백과 261</span></span>
+                            <span class="rbat">좋아서하는어린이책연구회, 이현아, 이소리, 전보람, 이다인 저 외 8명 | 카시오페아</span>
+                            <span class="rvrk">
+                                <img src="img/bluestar.png">
+                                <span class="rkpt">9.9</span>
+                                <span class="rkam">(28건)</span>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+                <li class="rvlist">
+                    <img src="img/intelligence.png">
+                    <img class="wimg" src="img/wintelligence.png">
+                    <div class="rvbg">
+                        <img class="rvbk" src="img/intellbook.png">
+                        <div class="rbinfo">
+                            <span class="rbtt"><span class="rbb"> 지적자본론</span> : 모든 사람이 디자이너가 되는 미래</span>
+                            <span class="rbat">마스다 무네아키 저/이정환 역 | 민음사</span>
+                            <span class="rvrk">
+                                <img src="img/bluestar.png">
+                                <span class="rkpt">9.0</span>
+                                <span class="rkam">(169건)</span>
+                            </span>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <ul id="direction">
+            <a href="#" onclick="return false" id="prev"><img id="previ" src="img/left.png" alt="prev"></a>
+            <a href="#" onclick="return false" id="next"><img id="nexti" src="img/right.png" alt="next"></a>
+        </ul>
+        <ul id="halfauto">
+            <li class="dotbtn2"></li>
+            <li class="dotbtn2"></li>
+            <li class="dotbtn2"></li>
+        </ul>
+
+        <span id="thisweek">금주에 추천을 많이 받은 리뷰</span>
+
+        <ul id="twlist">
+            <li class="twl">
+                <span class="rank">1</span>
+                <img src="img/warming.png">
+                <div class="twinfo">
+                    <span class="mem">r******6 님의 리뷰</span>
+                    <span class="twbt">[에세이] 때로는 워밍업 없이 가보고 싶어</span>
+                    <span class="rcm">추천 28건 | 댓글 24건</span>
+                    <span class="twrk">
+                        <img class="bs" src="img/bluestar.png">
+                        <span class="twpt">10.0</span>
+                        <span class="twam">(8건)</span>
+                    </span>
+                </div>
+            </li>
+            <li class="twl">
+                <span class="rank">2</span>
+                <img src="img/plant.png">
+                <div class="twinfo">
+                    <span class="mem">h*****9 님의 리뷰</span>
+                    <span class="twbt">‘식물의 이름은 어디서 왔을까’ 식물의 이름에 얽힌 이야기</span>
+                    <span class="rcm">추천 26건 | 댓글 21건</span>
+                    <span class="twrk">
+                        <img class="bs" src="img/bluestar.png">
+                        <span class="twpt">9.3</span>
+                        <span class="twam">(12건)</span>
+                    </span>
+                </div>
+            </li>
+            <li class="twl">
+                <span class="rank">3</span>
+                <img src="img/cosmos.png">
+                <div class="twinfo">
+                    <span class="mem">o***********g 님의 리뷰</span>
+                    <span class="twbt">웅대한 우주 속 한낱 미물인 우리, 그렇지만 우리는 소중하고 아름다워</span>
+                    <span class="rcm">추천 20건 | 댓글 21건</span>
+                    <span class="twrk">
+                        <img class="bs" src="img/bluestar.png">
+                        <span class="twpt">9.6</span>
+                        <span class="twam">(1995건)</span>
+                    </span>
+                </div>
+            </li>
+        </ul>
+        <button type="submit" class="more"><span>리뷰</span> 더보기</button>
+    </section>
+
+
+    <section id="wmp">
+        <div id="mpt">
+            <span class="member">예사 회원끼리 묻고 답하는</span>
+            <span class="mempre">예사롭지 않은 선물 추천</span>
+        </div>
+        <div id="chatbg">
+            <div id="chatting">
+                <img id="qsp" src="img/question.png">
+                <ul class="qp">
+                    <li>j******1</li>
+                    <li>|</li>
+                    <li>2024.11.24</li>
+                </ul>
+                <div id="question">
+                        <ul id="qc">
+                            <li>기타</li>
+                            <li>친구/인연</li>
+                        </ul>
+                        <p class="qna q">두 가지 선택지 중 무엇을 선택할지 고민하는 친구에게 선물하면 좋은 책이 있을까요? 두 선택 모두 어느 정도의 후회는 남을 것 같아 선택을 어려워하고 있어요. (소설이면 좋을 거 같아요)</p>
+                </div>
+                <img id="asp" src="img/answer.png">
+                    <ul class="ap">
+                        <li>b****8</li>
+                        <li>|</li>
+                        <li>2024.11.27</li>
+                    </ul>
+                <div id="answer">
+                    <p class="qna a">주인공 진진이 상반된 사람들(어머니와 이모/ 사랑하는 사람과 이상적인 사람)등 여러 선택지 사이에서 고민하는 내용입니다. 공감되는 문장도 많고 잘 읽히는 문체입니다. 여러사람들이 인생책으로 꼽는 소설:)</p>
+                    <span class="qna aimg">
+                        <img src="img/paradox.png">
+                        <ul id="aimgprice">
+                            <li>[도서] 모순</li>
+                            <li><b>11,700원</b> (10%)</li>
+                        </ul>
+                    </span>
+                </div>
+            </div>
+        </div>
+        <button type="submit" class="more qunan"><span>추천 Q&A</span> 더보기</button>
+    </section>
+
+    <div class="sline"></div>
+
+    <section id="event">
+        <div id="eventt">
+            <span class="ct">YES24와 함께하는 문화생활</span>
+            <span class="tm">이 달의 행사</span>
+            <span class="ctm">YES캘린더</span>
+        </div>
+        <div id="evtwrapper">
+            <ul id="evts">
+                <li class="evl">
+                    <img class="evth" src="img/thisyear.png">
+                    <div class="evtt">
+                        <span class="ev">이벤트</span>
+                        <span class="plan">기획전</span>
+                    </div>
+                    <p class="evntt">2024 올해의 책</p>
+                    <p class="evntlt">올해 가장 영감을 준 책에 투표해 주세요!</p>
+                </li>
+                <li class="evl">
+                    <img class="evth" src="img/adultbooktalk.png">
+                    <div class="evtt">
+                        <span class="ev">이벤트</span>
+                        <span class="plan">클래스24</span>
+                    </div>
+                    <p class="evntt">[어떤 어른] 김소영 작가<br>북토크</p>
+                    <p class="evntlt">with 김지은 평론가</p>
+                </li>
+                <li class="evl">
+                    <img class="evth" src="img/hearme.png">
+                    <div class="evtt">
+                        <span class="ev">이벤트</span>
+                        <span class="plan">그래제본소</span>
+                    </div>
+                    <p class="evntt">[청설] 각본집</p>
+                    <p class="evntlt">청량 가득한 '청설즈'의 대사와 스틸컷!</p>
+                </li>
+                <li class="evl">
+                    <img class="evth" src="img/elemeng.png">
+                    <div class="evtt">
+                        <span class="ev">이벤트</span>
+                        <span class="plan">클래스24</span>
+                    </div>
+                    <p class="evntt">[초등 영어 식스] 권태형 <br>소장 강연회</p>
+                    <p class="evntlt">알고보면 극상위권 아이들만 몰래 하고 있던 진짜 영어 학습법</p>
+                </li>
+            </ul>
+        </div>
+
+        <ul id="direction">
+            <a href="#" onclick="return false" id="prev"><img id="previ" src="img/left.png" alt="prev"></a>
+            <a href="#" onclick="return false" id="next"><img id="nexti" src="img/right.png" alt="next"></a>
+        </ul>
+
+        <ul id="halfauto">
+            <li class="dotbtn3"></li>
+            <li class="dotbtn3"></li>
+            <li class="dotbtn3"></li>
+        </ul>
+        <button type="submit" class="more"><span>YES캘린더</span> 더보기</button>
+    </section>
+
+    <section id="service">
+        <p class="svtt">YES24 서비스</p>
+        <ul id="svlist">
+            <li class="svl">
+                <img src="img/cremaclub.png">
+                <p class="svt">크레마클럽</p>
+            </li>
+            <li class="svl">
+                <img src="img/ticket.png">
+                <p class="svt">티켓</p>
+            </li>
+            <li class="svl">
+                <img src="img/ch.yes.png">
+                <p class="svt">채널예스</p>
+            </li>
+            <li class="svl">
+                <img src="img/sarak(b).png">
+                <p class="svt">사락</p>
+            </li>
+            <li class="svl">
+                <img src="img/buyback.png">
+                <p class="svt">바이백</p>
+            </li>
+            <li class="svl">
+                <img src="img/shop(b).png">
+                <p class="svt">매장안내</p>
+            </li>
+        </ul>
+    </section>
+
+    <section id="notice">
+        <div class="sline"></div>
+
+        <div id="realnt">
+            <span class="big">공지</span>
+            <span class="small">12월 신용카드 무이자 할부 안내</span>
+        </div>
+
+        <div id ="wrealnt">
+            <span class="biglong">공지사항</span>
+            <span class="smalllong">&middot;12월 신용카드 무이자 할부 안내<span class="ntdate">&nbsp;&nbsp;&nbsp;2024-12-01</span></span>
+            <span class="smalllong">&middot;12월 상품권+쿠폰+결제+추천 혜택모음<span class="ntdate">&nbsp;&nbsp;&nbsp;2024-12-01</span></span>
+
+            <p class="ntmore">더보기</p>
+        </div>
+
+        <ul id="direction">
+            <img id="next" src="img/right.png" alt="next">
+        </ul>
+    </section>
+
+    <nav id="bar">
+        <ul id="navmenu">
+            <li class="snm">
+                <img src="img/stack.png">
+            </li>
+            <li class="snm">
+                <img src="img/nav search.png">
+            </li>
+            <li class="bnm">
+                <img src="img/nav logo.png">
+            </li>
+            <li class="snm">
+                <img src="img/mypage.png">
+            </li>
+            <li class="snm">
+                <img src="img/alarm.png">
+            </li>
+        </ul>
+    </nav>
+
+    <footer>
+        <ul id="ftsv">
+            <li>로그아웃</li>
+            <li>최근 본 상품</li>
+            <li>주문/배송</li>
+        </ul>
+        <p id="number">고객센터 1544-3800 | 중고샵 1566-4295</p>
+        <p id="nw">평일 09:00~18:00 토요일, 일요일 및 공휴일 휴무</p>
+        <p id="sellinfo">예스이십사(주) 사업자 정보</p>
+        <ul id="svend">
+            <li>이용약관</li>
+            <li>|</li>
+            <li class="imp">개인정보처리방침</li>
+            <li>|</li>
+            <li>PC버전</li>
+        </ul>
+        <ul id="svend">
+            <li>회사소개</li>
+            <li>|</li>
+            <li>거래처관계자께</li>
+            <li>|</li>
+            <li>도서홍보</li>
+            <li>|</li>
+            <li>광고</li>
+        </ul>
+        <p id="copy">Copyright &copy; YES24 Corp. All Rights Reserved.</p>
+    </footer>
+
+    <footer id="wfooter">
+    <div id="footwrap">
+        <div id="wft">
+            <ul class="meli">
+                <li class="meti">회사소개</li>
+                <li class="meti">인재채용</li>
+                <li class="meti">이용약관</li>
+                <li class="meti">개인정보처리방침</li>
+                <li class="meti">청소년보호정책</li>
+                <li class="meti">도서홍보안내</li>
+                <li class="meti">광고안내</li>
+                <li class="meti">제휴안내</li>
+                <li class="meti">복지제휴</li>
+                <li class="meti">매장안내</li>
+            </ul>
+            <ul class="iconlist">
+                <li class="iconimg"><img class="iconlogo" src="img/ch logo.png"></li>
+                <li class="iconimg"><img class="iconlogo" src="img/facebook logo.png"></li>
+                <li class="iconimg"><img class="iconlogo" src="img/insta logo.png"></li>
+                <li class="iconimg"><img class="iconlogo" src="img/x logo.png"></li>
+            </ul>
+        </div>
+    </div>
+    <div id="line"></div>
+
+    <div id="extrainfo">
+        <div id="flzone">
+            <img class="ftlogo" src="img/footer logo.png">
+        </div>
+        <ul id="textinfo">
+            <li class="comp">예스이십사(주)</li>
+            <li class="comex">대표 : 김석환, 최세라</li>
+            <li class="comex">주소 : 서울시 영등포구 은행로 11, 5층~6층(여의도동, 일신빌딩)</li>
+            <li class="comex">사업자등록번호 : 229-91-37000&nbsp;&nbsp; 통신판매업신고 : 제 2005-02682호 &nbsp;&nbsp;<span class="bold">사업자 정보확인</span></li>
+            <li class="comex">이메일 : yes24help@yes24.com &nbsp;&nbsp; 호스팅 서비스사업자 : 예스이십사(주)</li>
+            <li class="comex">Copyright &copy; YES24 Corp. All Rights Reserved.</li>
+        </ul>
+        <ul id="cs">
+            <li class="csm">고객센터</li>
+            <li class="cst">
+                <div class="cstw">
+                    <span class="bm">도서/음반 &nbsp;&nbsp; 1544-3800</span>
+                    <span class="bm">중고샵 &nbsp;&nbsp; 1566-4295</span>
+                </div>
+            </li>
+            <li class="cst">
+                <div class="cstw">
+                    <span class="bm">티켓예매 &nbsp;&nbsp; 1544-6399</span>
+                    <span class="bme">eBook 1:1 문의<img class="wright" src="img/_right(w).png"></span>
+                </div>
+            </li>
+            <li class="csb">
+                <span class="csbt">1:1 문의하기</span>
+                <span class="csbt">FAQ</span>
+                <span class="csbt">상담시간 안내</span>
+            </li>
+        </ul>
+    </div>
+    
+    <div id="csas">
+        <span class="csaf">소비자피해보상보험</span>
+        <img class="sgi" src="img/sgi logo.png">
+        <span class="csa">고객님은 안전거래를 위해 현금 등으로 결제 시 저희 쇼핑몰에서 가입한 구매안전서비스를 이용하실 수 있습니다.</span>
+        <span class="cssv">서비스가입사실 확인 <img class="cssvimg" src="img/_right(w).png"></span>
+    </div>
+
+    </footer>
+
+</body>
+<script>
+    const Btn = document.querySelector('.dbtn');
+    const hfMenu = document.querySelector('#hfmenu');
+
+        if (Btn && hfMenu) {
+            Btn.addEventListener('click', function() {
+                if (hfMenu.classList.contains('show')) {
+                    hfMenu.classList.remove('show');
+                    Btn.style.transform = 'rotate(0deg)';
+                } else {
+                    hfMenu.classList.add('show');
+                    Btn.style.transform = 'rotate(180deg)';
+                }
+            });
+        }
+
+    const hamBtn = document.querySelector('.titleimg');
+    const whfMenu = document.querySelector('#whfmenu');
+    const allDom = document.querySelectorAll('.dom');
+
+    if (hamBtn && whfMenu) {
+        hamBtn.addEventListener('click', function() {
+            if (whfMenu.classList.contains('show')) {
+                whfMenu.classList.remove('show');
+                hamBtn.src = './img/hmenu.png';
+                allDom.forEach(function(dom){
+                    dom.style.display = 'none';
+                });
+            } else {
+                whfMenu.classList.add('show');
+                hamBtn.src = './img/cancel.png';
+                allDom.forEach(function(dom){
+                    dom.style.display = 'none';
+                });
+            }
+        });
+    }
+</script>
+</html>
